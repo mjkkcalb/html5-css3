@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridEx8to쌤</title>
+  <style>
+    ul. li {
+      padding: 0;
+      margin: 0;
+    }
+
+    .container {
+      font-size: 1.2rem;
+      border: 2px solid #000;
+      width: 80vw;
+      margin: 20px auto;
+      padding: 2vw;
+      box-sizing: border-box;
+      box-shadow: 5px 10px #6528f7, 10px 15px #a076f9, 15px 20px #c4aef3, 20px 25px #e2daf1, 20px 25px 10px rgba(237, 228, 225, 0.5);
+    }
+
+    .container header {
+      display: grid;
+      grid-template-columns: 1fr 1fr 3fr;
+      place-items: end center;
+      border-bottom: 1px solid #000;
+      padding-bottom: 2vw;
+    }
+
+    .container .box {
+      list-style: none;
+      background-color: #ddd;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1vw;
+      padding: 1vw;
+    }
+
+    .container .box .item {
+      color: white;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      width: 100%;
+      aspect-ratio: 1/1;
+    }
+
+    .container .box .item:nth-child(odd) {
+      background-color: paleturquoise;
+    }
+
+    .container .box .item:nth-child(even) {
+      background-color: rgb(153, 154, 212);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+      </ul>
+      <ul>
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+      </ul>
+      <adress>경시도 수원시 팔달구 더조은컴퓨터아카데미</adress>
+    </header>
+    <ul class="box">
+      <li class="item">item1</li>
+      <li class="item">item2</li>
+      <li class="item">item3</li>
+      <li class="item">item4</li>
+      <li class="item">item5</li>
+      <li class="item">item6</li>
+
+    </ul>
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+@charset 'utf-8';
+
+html{
+  scroll-behavior: smooth;
+}
+/* 스크롤바 가로 크기*/
+body::-webkit-scrollbar{
+  width: 8px;
+}
+/*스크롤바 배경*/
+body::-webkit-scrollbar-track{
+  background-color: #000;
+}
+/*스크롤바 핸들*/
+body::-webkit-scrollbar-thumb{
+  background-color: #fff;
+  border: 1px solid red;
+  border-radius: 5px;
+}
+
+/*
+vedor prefix
+확정되지 않은 기능을 개발자가 미리 사용할 수 있게 만들어 놓은 약속어
+브라우저에 내장된 기능을 이 벤더(접두어)를 통해 사용하게 만듦
+-mㅡ IE
+-webkit- 크롬,엣지,웨일 
+-o- 오페라
+-mox- 파이어폭스
+*/
+
+body{
+  font-family: 'SpoqaHanSan', sans-serif;
+  font-size: 400;
+  text-align: center;
+  text-transform: capitalize;
+}
+/*nav*/
+.global_menu{
+  position: fixed;
+  top: 0;
+  left: 0; right: 0;
+  margin: auto; /* absolute,fix*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 50%;
+  height: 50px;
+  background-color: rgb(179, 207, 207);
+  border-radius: 0 0 20px 20px;
+
+
+  box-shadow:
+  4.2px 9.2px 9.4px rgba(0, 0, 0, 0.105),
+  8.3px 18.3px 31.7px rgba(0, 0, 0, 0.144),
+  20px 44px 142px rgba(0, 0, 0, 0.22)
+;
+}
+.global_menu li {
+  width: 20%;
+}
+.global_menu li a{
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 500;
+  height: 50px;
+  line-height: 50px;
+}
+
+.global_menu li:nth-child(1) a, #box1 {
+   background-color: orange; color: white; 
+  }
+.global_menu li:nth-child(2) a, #box2 { 
+  background-color: skyblue;color: white;
+ }
+.global_menu li:nth-child(3) a, #box3 {
+   background-color: palevioletred; color: white; 
+  }
+.global_menu li:nth-child(4) a, #box4 {
+   background-color: palegreen; color: white;
+   }
+
+   /*box*/
+   .box{
+    font-size: 2rem;
+    font-weight: 700;
+    /* height: calc(100vh - 100px); */
+    height: 100vh;
+    padding-top: 100px;
+    box-sizing: border-box;
+   }

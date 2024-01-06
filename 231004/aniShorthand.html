@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>animatin 축약형</title>
+  <style>
+    .wrapper{
+      display: flex;
+      position: relative;
+    }
+    .block{
+      width: 200px; height: 100px;
+      background-color: rgb(60, 114, 60);
+      color: white;
+      font-weight: bold; font-size: 1.2rem;
+    }
+    .box{
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      text-align: center; line-height: 150px;
+      color: white;
+      background-image: linear-gradient(#e28080, #2b85da) ;
+      font-size: 1.4rem;
+      font-weight: bold;
+
+      /* animation-name: move1;
+      animation-duration: 1s;
+      animation-delay: 0.5s;
+      animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+      animation-fill-mode: forwards;
+      animation-direction: alternate;
+      animation-iteration-count: 3        ; */
+
+      /* 순서에 상관없이 띄어쓰기로 구분. 두번째 나오는 s 는 대기시간으로 생략 가능 */
+      animation: move3 1s .5s 3 ease-in-out alternate forwards;
+
+
+      position: absolute;
+      left: 0;
+    }
+    .box:hover {
+      animation-play-state: paused; /* 일시 멈춤*/
+    }
+    @keyframes move1 {
+      100%{
+        background-image: linear-gradient(#dddb6d, #65aa54);
+        transform: rotate(360deg);
+        left: 90%;
+      } 
+    }
+    @keyframes move2 {
+      100%{
+        margin-left:70vw ;
+      }      
+    }
+    @keyframes move3 {
+      100%{
+        transform: translateY(70vw) rotate(360deg);
+      }
+    }
+    /*
+    <내가 했는데 망함>
+    .block{
+      background-color: palevioletred;
+      width: 200px; height: 50px;
+      position: fixed;
+      top: 100px; left: 100px;
+      z-index: 2;
+    }
+    .box{
+      background-image: linear-gradient(#e28080, #2b85da) ;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      float: left;
+      text-align: center;
+      line-height: 150px;
+      color: white;
+      font-weight: bolder;
+      z-index: 1;
+
+      animation-name: ni1;
+      animation-duration: 4s;
+      animation-iteration-count: 2;
+    }
+    @keyframes ani1 {
+      0%{
+        transform: rotate(180deg);
+      }
+      100%{
+        float: right;
+        transform: rotate(180deg)
+    } */
+  </style>
+</head>
+<body>
+
+  <h1>animation 축약형</h1>
+  <div class="wrapper">
+  <div class="box">
+    <p>축약형</p>
+  </div>
+  <div class="block">block</div>
+  </div>
+</body>
+</html>

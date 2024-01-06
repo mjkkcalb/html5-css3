@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>mqEx3toT</title>
+  <style>
+    body {
+      margin: 0;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .container {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      background-color: papayawhip;
+
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1vw;
+      padding: 10vw;
+      box-sizing: border-box;
+    }
+
+    .container li {
+      background-color: skyblue;
+      width: calc(50% -1vw);
+    }
+
+    .container li.none {
+      display: none;
+    }
+
+    @media (width >=414px) {
+
+      /* 3열 */
+      .container li {
+        width: calc(33.3333% - 1vw);
+        background-color: rgb(214, 167, 214);
+      }
+
+      .container li:last-child {
+        display: none;
+      }
+    }
+
+    @media (width >=768px) {
+
+      /* 4열 */
+      .container li {
+        width: calc(25% - 1vw);
+      }
+
+      .container li.bg {
+        display: block;
+        background-color: seagreen;
+      }
+    }
+
+    @media (width >=960px) {
+
+      /* 5열 */
+      .container {
+        width: 90vw;
+        margin: 0 auto;
+        font-size: 2rem;
+      }
+
+      .container li {
+        box-sizing: border-box;
+        width: calc(20% - 1vw);
+        padding: .5vw;
+      }
+
+      .container .none {
+        display: block;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <ul class="container">
+    <li>item1</li>
+    <li>item2</li>
+    <li>item3</li>
+    <li class="none">item4</li>
+    <li>item5</li>
+    <li>item6</li>
+    <li>item7</li>
+    <li>item8</li>
+    <li>item9</li>
+    <li class="none bg">item10</li>
+  </ul>
+</body>
+
+</html>

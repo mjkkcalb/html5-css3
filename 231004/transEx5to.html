@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transEx5to</title>
+  <style>
+    body{text-align: center;}
+    .products{
+      list-style: none;
+      margin: 0 auto;
+      padding: 0;
+      border: 3px solid black;
+      background-color: orange;
+
+      display: flex;
+
+      width: 90%;
+      max-width: 1200px;
+    }
+    .products li{
+      width: 33.3333%;
+      /* flex-basis: 33.3333%; */
+      margin: 1vw;
+      overflow: hidden;
+      aspect-ratio: 1/1;
+    }
+    .products li img{
+      width: 100%;
+      vertical-align: top;
+    }
+    .products li .txt-box{
+      background-color: rgba(0, 0, 0, 0.719);
+      color: white;
+      transition: .4s;
+      padding: 1vw;
+      aspect-ratio: 1/1;
+    }
+    .products li:hover > .txt-box{
+      transform: translateY(-100%);
+    }
+  </style>
+</head>
+<body>
+  <!-- 
+    1. 마우스를 올리면 아래에서 위로 가격 레이어가 올라옴
+    2. 일정 사이즈 이상으로 커지지 않음
+   -->
+   <h1>transEx5</h1>
+   <ul class="products">
+     <li>
+       <img src="./images/shoes1.jpg" alt="shoes1">
+       <div class="txt-box">
+         <h3>조던 1 하이 (Little Kids)</h3>
+         <p class="desc">지난번에 기회를 놓쳤어도 걱정하지 마세요</p>
+         <p class="price">가격: 109,000원</p>
+       </div>
+     </li>
+     <li>
+       <img src="./images/shoes2.jpg" alt="shoes2">
+       <div class="txt-box">
+         <h3>나이키 덩크 로우 레트로</h3>
+         <p class="desc">하드우드를 위해 태어나 스트리트로 무대를 옮겨온 나이키 덩크 로우 레트로</p>
+         <p class="price">가격: 129,000원</p>
+       </div>
+     </li>
+     <li>
+       <img src="./images/shoes3.jpg" alt="shoes3">
+       <div class="txt-box">
+         <h3>나이키 인빈서블 3</h3>
+         <p class="desc">러닝 내내 최상의 쿠셔닝을 선사하는 인빈서블 3는 발 아래에 최고의 편안함을 선사</p>
+         <p class="price">가격: 209,000원</p>
+       </div>
+     </li>
+   </ul>
+</body>
+</html>

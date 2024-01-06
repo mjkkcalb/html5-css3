@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>homework1</title>
+  <style>
+    body{
+      text-align: center;
+    }
+    table th,td{
+      border: 1px solid black;
+      min-width: 100px;
+      max-width: 200px;
+    }
+    table{
+      margin: 0 auto;
+      border-collapse: collapse;
+      border: 3px solid rgb(99, 78, 78);
+      border-top: none;
+    }
+    table .sub_title {
+      width: 60px;
+    }
+    table th{
+      background-color: wheat;
+    }
+    table caption{
+      background-color: sandybrown;
+      color: white;
+      font-weight: bold;
+      height: 30px;
+      line-height: 30px;/* 수직 정렬 */
+      border-radius: 10px 10px 0 0;
+      border: 3px solid rgb(99, 78, 78);
+      border-bottom: none;
+      }
+  </style>
+</head>
+<body>
+  <h1>tableStyleEx1</h1>
+  <table class="box1">
+
+     <caption>시간표</caption>
+     <thead>
+      <tr>
+        <th class="sub_title">구분</th>
+        <th>월요일</th>
+        <th>화요일</th>
+        <th>수요일</th>
+        <th>목요일</th>
+        <th>금요일</th>
+      </tr>
+     </thead>
+
+     <tbody>
+      <tr>
+        <th class="sub_title">1교시</th>
+        <td rowspan="2">기초 드로잉</td>
+        <td rowspan="2">색채학</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <th class="sub_title">2교시</th>
+        <td rowspan="3">html</td>
+        <td></td>
+        <td rowspan="2">포트폴리오 제작</td>
+      </tr>
+
+      <tr>
+        <th class="sub_title">3교시</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <th class="sub_title">4교시</th>
+        <td rowspan="2">포토그래픽</td>
+        <td></td>
+        <td rowspan="2">구성요소 제작</td>
+        <td></td>
+      </tr>
+
+      <tr>
+        <th class="sub_title">5교시</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+     </tbody>
+
+</body>
+</html>

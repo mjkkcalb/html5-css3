@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transform2-rotate</title>
+  <style>
+    img{
+      width: 100%;
+      border: 3px solid red;
+      box-sizing: border-box;
+      transition: .7s;
+    }
+    .box{
+      border: 6px solid black;
+      margin: 100px auto;
+      width: 300px; height: 300px;
+      /* overflow: hidden; */
+    }
+    .box1:hover img {transform: rotate(-45deg);}
+    .box2:hover img {transform: rotate(360deg);}
+    .box3:hover img {transform: rotateX(45deg);}
+    .box4:hover img {transform: rotateY(60deg);}
+  </style>
+</head>
+<body>
+  <div class="box box1"><img src="./images/img1.jpg" alt="img"></div>
+  <div class="box box2"><img src="./images/img1.jpg" alt="img"></div>
+  <div class="box box3"><img src="./images/img1.jpg" alt="img"></div>
+  <div class="box box4"><img src="./images/img1.jpg" alt="img"></div>
+</body>
+</html>

@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* header.css */
+
+/**** header ****/
+header {
+  position: fixed;
+  border-bottom: 1px solid #eee;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  z-index: 1000;
+}
+header .header-wrapper {
+  /* background-color: orange; */
+  height: 98px;
+  max-width: 1900px;
+  min-width: 1100px;
+  /* min-width: 63%; */
+
+  margin: 0 auto;
+  justify-content: space-between;
+}
+header h1 {
+  width: 205px;
+  height: 36px;
+  background: url(./assets/images/logo.png) no-repeat 0 50% / contain;
+  text-indent: -9999px;
+  margin: 0 3.158vw;
+}
+header .global-nav {
+  font-weight: 600;
+  font-size: var(--font-size-18);
+  /* background-color: #ddd; */
+  width: 55%;
+  /* justify-content: space-between; */
+}
+header .global-nav li {
+  /* width: 20%; */
+  flex: 1;
+}
+header .global-nav li:hover {
+  color: var(--point-color);
+}
+header .global-utill {
+  font-size: var(--font-size-14);
+  justify-content: baseline;
+}
+header .global-utill li a {
+  display: block;
+  margin: 1vw;
+}
+header .global-utill li:first-child a {
+  width: 140px;
+  padding: 6px 0 6px 30px;
+  background: var(--point-color)
+    url(./assets/images/main_reserve_icon2_2108.png) no-repeat 10% 50% / 18px;
+  border-radius: 30px;
+}

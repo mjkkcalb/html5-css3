@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>aniEx3쌤이랑</title>
+  <link rel="stylesheet" href="./aniExmation.css">
+  <style>
+    body{margin: 0; text-align: center;}
+    .container{
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
+    }
+    .container .bicycle-wrapper{
+      position: relative;
+      /* border: 1px solid black; */
+
+      animation: move 3s infinite linear;
+    }
+    .container .bicycle-wrapper .wheel{
+      position: absolute;
+      left: -93px; bottom: -87px;
+      /* transform: translate(-42%,40%); */
+
+      animation: spin infinite linear 2s;
+    }
+    .container .bicycle-wrapper .wheel:last-child{
+      left: auto; /* 기존 left 무력화 */
+      right: -94px;
+    }
+    .container .bicycle-wrapper .bicycle{}
+    .container .fireworks{
+      position: absolute;
+      top: 50px ;right: 50px;
+
+      animation: scale 2s infinite alternate;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="bicycle-wrapper">
+      <img src="./images/bicycle.png" alt="자전거 몸통" class="bicycle">
+      <img src="./images/wheel.png" alt="자전거 바퀴" class="wheel">
+      <img src="./images/wheel.png" alt="자전거 바퀴" class="wheel">
+    </div>
+    <img src="./images/fireworks.png" alt="불꽃놀이 일러스트" class="fireworks">
+  </div>
+  
+</body>
+</html>

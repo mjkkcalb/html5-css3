@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>수열선택자ex</title>
+  <style>
+    .gnb{
+      list-style: none;
+      display: flex;
+
+    }
+    .gnb li{
+      background-color: rgb(144, 190, 57);
+      width: 100px; height: 50px;
+      text-align: center;
+      font-weight: bolder;
+    }
+    .gnb a{
+      text-decoration: none;
+      color: white;
+      line-height: 50px;
+      display: block;
+    }
+    .gnb li:nth-child(even){
+      background-color: rgb(19, 19, 85);
+    }
+    .gnb li:nth-child(4n+3) {
+      background-color: mediumvioletred;
+    }
+    .gnb li:nth-child(1){
+      border-radius: 25px 0 0 25px;
+    }
+    .gnb li:nth-child(9){
+      border-radius: 0 25px 25px 0; 
+    }
+    .gnb li:hover a{
+      color: rgb(56, 75, 94);
+      background-color: rgb(215, 231, 250);
+    }
+  </style>
+</head>
+<body>
+  <ul class="gnb">
+    <li><a href="">1</a></li>
+    <li><a href="">2</a></li>
+    <li><a href="">3</a></li>
+    <li><a href="">4</a></li>
+    <li><a href="">5</a></li>
+    <li><a href="">6</a></li>
+    <li><a href="">7</a></li>
+    <li><a href="">8</a></li>
+    <li><a href="">9</a></li>
+  </ul>
+  
+</body>
+</html>

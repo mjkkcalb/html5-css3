@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexEx4</title>
+  <style>
+    body{
+      margin: 0;
+    }
+    /* 첫번째 방법
+     .wrapper {
+      display: flex;
+      align-items: flex-end;
+      height: 100vh;
+    } 
+    footer{
+      background-color: antiquewhite;
+      width: 1400px;
+      width: 72.917vw; // 1400/1920*100 (데스크 사이즈)// 
+      margin: 0 auto;
+      padding: 1.042vw 1.563vw; // 20/1920*100  30/1920*100 // 
+      box-sizing: border-box;
+    } */
+    .wrapper{
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+    }
+    footer{ /* flex-item */
+      background-color: antiquewhite;
+      width: 72.917vw;
+      padding: 1.042vw 1.563vw;
+      box-sizing: border-box;
+
+      /* align-self: flex-end; 두번째 방법. 플렉스 아이템에 직접 적용 */
+      /* 세번째 방법
+          플렉스 아이템에 직접 적용
+          margin을 통해 개별적으로 위치 지정 가능. 더 섬세하게 조정 가능
+      */
+      /* margin: auto; center center */
+      /* margin-left: auto; 여백이 왼쪽으로 들어가기 때문에 아이템은 오른쪽 배치 */
+      /* margin-right: auto; 여백이 오른쪽으로 들어가기 때문에 아이템은 왼쪽 배치 */
+      /* margin-bottom: auto; 여백이 아래쪽으로 들어가기 때문에 아이템은 위쪽 배치 */
+      /* margin-top: auto; 여백이 위쪽으로 들어가기 때문에 아이템은 아래쪽 배치 */
+      margin: 5rem auto 2rem;
+      margin: auto auto 0;
+    }
+    footer h2{
+      margin: 0;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="wrapper"><!-- flex container-->
+  <footer><!-- flex item-->
+    <h2>footer</h2>
+    <p>군영과 불어 갑 천고에 미묘한 그것을 끓는 시들어 사막이다. 꽃 역사를 이상, 뜨고, 대고, 청춘은 되려니와, 때까지 교향악이다. 청춘의 그들의 전인 듣는다. 인간에 능히 우리 피가 것이다. 인간의 원질이 그림자는 살 영원히 인간이 청춘 말이다. 어디 동산에는 품었기 고행을 피부가 이상, 두기 가는 되는 운다. 하였으며, 우는 트고, 꽃이 스며들어 간에 아름다우냐? 황금시대를 그들에게 이상은 운다. 그들은 모래뿐일 고동을 이것이다.</p>
+  </footer>
+  </div>
+</body>
+</html>

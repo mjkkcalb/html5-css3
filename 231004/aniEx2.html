@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>aniEx2</title>
+  <style>
+    body{
+      background-color: black;
+      color: white;
+      text-align: center;
+      font-size: 10rem;
+      font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+      text-transform: uppercase;
+    }
+    .txt-wrapper span:hover{
+      animation: neon infinite .8s;
+    }
+
+
+    @keyframes neon {
+      10%{ text-shadow: 5px 5px #41d0d4, -5px -6px #ff7575; }
+      25%{ text-shadow: -5px -1px #41d45a, 5px 6px #fffd75;}
+      50%{ text-shadow: 5px -4px #bb41d4, -8px 6px #b4c8e7;}
+      75%{ text-shadow: -8px -4px #f89c23, -5px -4px #918570; }
+      100%{ text-shadow: -5px 0px #2d29f1, -8px -6px #bd5b5b; }
+    }
+  </style>
+</head>
+<body>
+  <div class="txt-wrapper">
+    <span>C</span>
+    <span>S</span>
+    <span>S</span>
+    <span>4</span>
+  </div>
+</body>
+</html>

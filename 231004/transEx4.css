@@ -1,0 +1,77 @@
+@charset "utf-8";
+
+body{
+  background: linear-gradient(#f7f4ee,#d8ccb9 ); 
+  height: 100vh;
+}  
+.profile-wrapper{
+  min-width: 400px;
+  max-width: 550px;
+  background-color: white;
+  margin: 50px auto;
+
+  box-shadow:
+  1.1px 0.8px 2px rgba(0, 0, 0, 0.031),
+  2.7px 1.9px 4.8px rgba(0, 0, 0, 0.042),
+  5.1px 3.6px 9px rgba(0, 0, 0, 0.05),
+  9.2px 6.5px 16.1px rgba(0, 0, 0, 0.057),
+  17.1px 12.1px 30.1px rgba(0, 0, 0, 0.066),
+  41px 29px 72px rgba(0, 0, 0, 0.09);
+
+  position: relative;
+  overflow: hidden;
+}
+.profile-wrapper .txt-box{
+  width: 50%;
+  padding: 20px;
+}
+.profile-wrapper .txt-box h2{
+  font-family: 'Lobster', Arial, Helvetica, sans-serif;
+  text-transform: capitalize;
+  font-size: 1.8rem;
+  border-bottom: 1px solid black;
+  padding-left: 4px;
+}
+.profile-wrapper .txt-box p{
+  margin: 26px 0 26px 4px;
+}
+/* icon */
+.profile-wrapper .txt-box .sns-group{
+  display: flex;
+}
+.profile-wrapper .txt-box .sns-group li{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.profile-wrapper .txt-box .sns-group a{
+  color: inherit;
+  display: block;
+  margin-right: 20px;
+}
+
+/* 하단 프로필 */
+.profile-wrapper h3 {
+  background-color: black;
+  color: white;
+  font-style: italic;
+  font-family: 'Lobster', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  padding: 4px 20px;
+}
+/* 이미지 */
+.profile-wrapper .img-box{
+  border: 6px solid white;
+  width: 500px; height: 500px;
+  border-radius: 50%;
+  background-image: url(./images/donde-se-utiliza-el-gif.gif);
+
+  position: absolute;
+  top: 50%; right: -40%;
+  transform: translateY(-50%);
+
+  transition: 0.3s;
+}
+.profile-wrapper:hover .img-box{
+  right: -35%;
+}

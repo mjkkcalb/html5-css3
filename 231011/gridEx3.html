@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridEx3</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      width: 80%;
+      height: 60vh;
+      margin: 50px auto;
+      border: 6px solid #000;
+
+      display: grid;
+      grid-template: repeat(4, 1fr) / repeat(12, 1fr);
+    }
+
+    .container .item:nth-child(1) {
+      background-color: rgb(139, 204, 204);
+      grid-column: 1/13;
+    }
+
+    .container .item:nth-child(2) {
+      background-color: rgb(168, 216, 141);
+      grid-column: 3/6;
+    }
+
+    .container .item:nth-child(3) {
+      background-color: rgb(226, 167, 206);
+      grid-column: 1/5;
+    }
+
+    .container .item:nth-child(4) {
+      background-color: rgb(224, 219, 174);
+      grid-column: 2/4;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">span1</div>
+    <div class="item">span2</div>
+    <div class="item">span3</div>
+    <div class="item">span4</div>
+  </div>
+</body>
+
+</html>

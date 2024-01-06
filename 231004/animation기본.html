@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>animationBasic</title>
+  <style>
+    .box{
+      background-color: skyblue;
+      width: 200px; height: 200px;
+      margin: 100px auto;
+      text-align: center; font-weight: bold;
+
+      animation-name: ani4;/* 애니메이션 이름. 키프레임에 부여한 이름 */
+      animation-duration: 2s;/*진행시간*/
+      animation-delay: 0.5s ;/*대기시간*/
+      animation-timing-function: linear;/*움직임 스타일*/
+      animation-iteration-count: infinite;/*반복 횟수 - 숫자로 줘도 된다*/
+      animation-fill-mode: backwards;/*끝난 후 위치 기존값. backwords-> 끝난 후 출발점으로 돌아옴 / forward -> 끝난 후 도착점에서 그대로 있음 */
+      animation-direction: alternate;/*방향 기본값 -normal / 역방향 - reverse / alternate -> 순방향 진행 후 역방향 진행 / alternate-revers -> 역방향 진행 후 순방향*/
+    }
+    /* 애니메이션을 적용시키키 위해 미리 만들어 놓은 움직임. 작성 위치는 상관 없음 */
+    @keyframes ani1 { /* 사용자 정의 이름 */
+      from{/*움직임 시작*/
+        width: 400px;
+        height: 400px;
+      }to{/*움직임 끝*/
+        width: 600px;
+        height: 600px;
+        font-size: 2rem;
+      }
+    }
+    @keyframes ani2 {
+      0%{
+        width: 200px; height: 200px;
+      }100%{
+        transform: scale(2);
+        background-color: slateblue;
+      }
+    }
+    @keyframes ani3 {
+      100%{
+        transform: translateX(400px) rotate(360deg);
+        background-color: darkolivegreen;
+      }
+    }
+    @keyframes ani4 {
+      10%,70% {
+        background-color: palegoldenrod;
+      }
+      50%{
+        background-color: palevioletred;
+        transform: rotate(180deg);
+      }
+      100%{
+        transform: rotate(-180deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>animation 기본</h1>
+  <p>스스로 움직임</p>
+  <div class="box">애니메이션</div>
+</body>
+</html>

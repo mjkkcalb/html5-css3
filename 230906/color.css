@@ -1,0 +1,32 @@
+@charset "utf-8";
+
+body{
+  background-color: rgb(248, 178, 26);
+}
+
+#box1{
+  color: rgb(255, 37, 219);
+}
+
+#box2{
+  color: rgb(189, 28, 230);
+}
+
+#box3{
+  color: rgb(15, 139, 255);
+}
+
+#box4{
+  color: rgb(0, 255, 234);
+}
+
+h1.bg {/* 종속 선택자 : 띄어쓰기 없이 작성. 앞의 선택자들 중 뒤의 선택자들 중 뒤이 선택자까지 가지고있는 선택자*/
+  background-color: rgb(255, 255, 255);
+}
+
+.inline{
+  background-color: brown;
+}
+.block{
+  background-color: bisque;
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx4</title>
+  <style>
+    body{
+      margin: 0;
+      font-size: 1.2rem;
+      font-weight: bolder;
+      height: 300vh;
+    }
+    .container{
+      background-color: aliceblue;
+      height: 300vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .container header{
+      background-color: navy;
+      color: white;
+      height: 14vh;
+      width: 100%;
+      font-size: 1.6rem;
+      box-sizing: border-box;
+      padding: 10px 20px;
+    }
+    .container header em{
+      font-style: normal;
+      font-size: 1.2rem;
+    }
+    .container main{
+      width: 70%;
+      height: 286vh;
+      background-color: tomato;
+      color: white;
+      box-sizing: border-box;
+      padding: 10px 20px;
+    }
+    .container aside{
+      width: 30%;
+      background-color: skyblue;
+      height: 20vh;
+      color: white;
+      position: sticky;
+      top: 0px;
+      box-sizing: border-box;
+      padding: 10px 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>layout_sticky <br><em>header</em></header>
+    <main>main contents</main>
+    <aside>sticky sidebar</aside>
+  </div>
+</body>
+</html>

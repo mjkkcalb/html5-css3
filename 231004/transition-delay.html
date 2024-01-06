@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transition-delay</title>
+  <style>
+    h1{
+      text-align: center;
+    }
+    .container{
+      list-style: none;
+      display: flex;
+      border: 5px solid black;
+      width: 90vw; height: 70vh;
+      justify-content: space-around;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .container li{
+      background-color: aquamarine;
+      font-size: 2rem;
+      margin: 0.4rem;
+      width: calc(20% - 1rem); height: 40px;
+      text-align: center; 
+      font-weight: bold;
+      flex-shrink: 0; /* 1 - 넘치지 않게 , 0 - 넘치는 그대로*/
+      transition-property: all;
+      transition-duration: 1s;
+    }
+    /* .container 영역에 마우스를 올리면, 각 박스가 움직임 */
+          /* 높이 값 clac의 경우 부모요소의 높이가 한정되어 있어야 자식요소에 %를 쓸 수 있다*/
+    .container:hover li:nth-child(1){
+      height: calc(100% - 0.8rem); 
+      background-color: #6caa71;
+      transition-delay: 0;
+    }
+    .container:hover li:nth-child(2){
+      height: calc(100% - 0.8rem); 
+      background-color: #4e9254;
+      transition-delay: 0.5s;
+    }
+    .container:hover li:nth-child(3){
+      height: calc(100% - 0.8rem); 
+      background-color: #225e27;
+      transition-delay: 1s;
+    }
+    .container:hover li:nth-child(4){
+      height: calc(100% - 0.8rem); 
+      background-color: #0e2910;
+      transition-delay: 2s;
+    }
+    .container:hover li:nth-child(5){
+      height: calc(100% - 0.8rem); 
+      background-color: #040e05;
+      transition-delay: 3s;
+    }
+  </style>
+</head>
+<body>
+  <h1>transition-delay</h1>
+  <ul class="container">
+    <li>바로진행</li>
+    <li>0.5초</li>
+    <li>1초</li>
+    <li>2초</li>
+    <li>3초</li>
+  </ul>
+  
+</body>
+</html>

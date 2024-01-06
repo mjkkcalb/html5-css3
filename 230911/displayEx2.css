@@ -1,0 +1,28 @@
+@charset "utf-8";
+
+body{
+  margin: 0;
+}
+.global_nav{
+  background-color:skyblue;
+  margin: 0;
+  padding-left: 0;
+}
+.global_nav li{
+  display: inline-block;
+}
+.global_nav li a{
+  background-color: antiquewhite;
+  text-decoration: none;
+  text-align: center;
+  font-size: 18px;
+  color: yellow;
+  font-weight: bold;
+  display: block;
+  width: 100px; height: 40px;
+  line-height: 40px; /*text 위.아래 중앙 정렬 */
+}
+.global_nav li:hover {
+  background: navy;
+  color: white;
+}

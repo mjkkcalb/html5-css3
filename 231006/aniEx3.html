@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>aniEx3</title>
+  <style>
+    body{position: relative;}
+    .container .spk{
+      position: absolute;
+      top: 50px;right: 50px;
+
+      animation: move1 2s linear infinite alternate;
+    }
+    .container .bicycle{
+      position: absolute;
+      top: 250px; left: 0;
+      
+      animation: move3 3s linear infinite ;
+    }
+    .container .bicycle .women{
+      position: relative;  
+    }
+    .container .bicycle .wheel1{
+      position: absolute;
+      bottom: -90px; left: -90px;
+
+      animation: move2 3s linear infinite;
+    }
+    .container .bicycle .wheel2{
+      position: absolute; 
+      bottom: -90px; left: 380px;
+
+      animation: move2 3s linear infinite;
+    }
+
+    @keyframes move1 {
+      0%{transform: scale(0);}
+      100%{transform: scale(1);}
+    }
+    @keyframes move2 {
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    @keyframes move3 {
+      100%{
+        transform: translateX(1500px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="./images/fireworks.png" alt="반짝이" class="spk">
+    <div class="bicycle">
+    <img src="./images/bicycle.png" alt=".자전거 타는 여자" class="women">
+    <img src="./images/wheel.png" alt="자전거 휠" class="wheel1">
+    <img src="./images/wheel.png" alt="자전거 휠" class="wheel2">
+    </div>
+  </div>
+</body>
+</html>

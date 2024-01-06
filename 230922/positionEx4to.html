@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx4to</title>
+  <style>
+    body, h1, h2{
+      margin: 0; padding: 0;
+      color: white;
+    }
+    header, footer{
+      background-color: blue;
+      height: 100px;
+      padding: 20px;
+    }
+    main{
+      background-color: rgb(228, 237, 245);
+      display: flex;
+    }
+    main article{
+      width: 70%; 
+      height: 300vh;
+      padding: 20px;
+      background-color: aqua;
+      box-sizing: border-box;
+    }
+    main aside{
+      background-color: aquamarine;
+      box-sizing: border-box;
+      width: 30%;
+      height: 200px;
+      padding: 20px;
+
+      position: sticky;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>positionEx4</h1>
+    <h2>header</h2>
+  </header>
+  
+  <main>
+    <article>
+      <h2>main contents</h2>
+    </article>
+    <aside>
+      <h2>sticky sidebar</h2>
+    </aside>
+  </main>
+  <footer></footer>
+</body>
+</html>

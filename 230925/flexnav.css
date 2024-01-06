@@ -1,0 +1,81 @@
+@charset "utf-8";
+
+body{
+  font-family: 'SpoqaHanSan', -apple-system, BlinkMacSystemFont, '맑은 고딕', '돋움', sans-serif;
+  font-size: 400;
+  font size: 1.3rem;
+  text-align: center;
+  text-transform: capitalize;
+}
+main{
+  background-color: aliceblue;
+  height: 200vh;
+  font-weight: 700;
+  font-size: 4rem;
+  padding-top: 200px;
+}
+
+/*** css wrapper ***/
+h1{
+  background-color: #ebb5b5;
+  color: white;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  font-weight: 700;
+}
+/*** 대메뉴 ***/
+.global_menu{
+  display: flex;
+  background-color: beige;
+  justify-content: center;
+  height: 50px;
+
+  position: sticky;
+  top: 0;
+}
+/*** 각각의 대매뉴 제목***/
+.global_menu  > li > a{ 
+  /* > 가 들어가면 바로 밑에 자식만 취급 or class 붙이기*/
+  display: block;
+  font-size: 1.4rem;
+  height: 50px;
+  line-height: 50px;
+  min-width: 120px;
+
+  border-right: 1px solid rgb(100, 85, 83);
+}
+.global_menu > li:last-child > a{
+  border-right: none;
+}
+.global_menu > li > a:hover {
+  background-color: rgb(173, 150, 119);
+  color: white;
+}
+/*** 각 각의 소메뉴 ***/
+.global_menu li .menu1{
+  display: none;
+}
+/** 각 대메뉴에 마우스를 올리면, 해당 대메뉴의 소메뉴가 나타남 **/
+.global_menu li:hover > .menu1{
+  display: block;
+}
+/* .global_menu:hover .menu1{ 전체 하부 보이게 할 때
+  display: block;
+} */
+.global_menu li .menu1 a{
+  display: block;
+  border-bottom: 1px solid black;
+  background-color: rgb(204, 192, 175);
+  height: 40px;
+  line-height: 40px;
+}
+.global_menu li .menu1 a:hover{
+  background-color: rgb(100, 85, 83);
+  color: white;
+}
+.global_menu li .menu1 li:last-child a{
+  border-bottom: none;
+}

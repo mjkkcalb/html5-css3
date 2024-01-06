@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>반응형 웹 연습</title>
+  <!-- favicon -->
+  <!-- og -->
+  <!-- 초기화 -->
+  <link rel="stylesheet" href="./assets/styles/reset.css">
+  <!-- Link Swiper's CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+  <!-- style -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- index -->
+  <link rel="stylesheet" href="./index.css">
+  <!-- pc -->
+  <link rel="stylesheet" media="(width >= 1200px)" href="./pc.css">
+
+  <!-- kakao js -->
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+
+<body>
+  <!-- header -->
+  <header class="flex">
+    <h1>
+      <a href="./index.html">
+        <img src="./assets/images/logo.png" alt="반응형웹 로고">
+      </a>
+    </h1>
+    <nav>
+      <!-- px -->
+      <menu class="global-nav">
+        <li><a href="#">ABOUT</a></li>
+        <li><a href="#">SEVICE</a></li>
+        <li><a href="#">PORTFOLIO</a></li>
+        <li><a href="#">BOARD</a></li>
+        <li><a href="#">CONTACT</a></li>
+      </menu>
+      <!-- mobile -->
+      <a href="#" class="mobile-btn">
+        <span>모바일 메뉴</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- contents -->
+  <!-- main-silde -->
+  <section class="main-slide">
+    <div class="swiper main-swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide main-bg1">Slide 1</div>
+        <div class="swiper-slide main-bg2">Slide 2</div>
+        <div class="swiper-slide main-bg3">Slide 3</div>
+        <div class="swiper-slide main-bg4">Slide 4</div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </section>
+
+  <!-- main-intro -->
+  <section class="main-intro">
+    <ul class="main-intro-wrapper grid space">
+      <li>
+        <h3>Branding</h3>
+        <p>
+          We are a passionate digital design agency that specializes in beautiful and easy-to-use digital design & web
+          development services.This theme does everything you could possibly want it to do and, it is beautifully
+          designed.
+        </p>
+      </li>
+      <li>
+        <h3>Development</h3>
+        <p>
+          We are a passionate digital design agency that specializes in beautiful and easy-to-use digital design & web
+          development services.This theme does everything you could possibly want it to do and, it is beautifully
+          designed.
+        </p>
+      </li>
+      <li>
+        <h3>Analysis</h3>
+        <p>
+          We are a passionate digital design agency that specializes in beautiful and easy-to-use digital design & web
+          development services.This theme does everything you could possibly want it to do and, it is beautifully
+          designed.
+        </p>
+      </li>
+      <li>
+        <h3>Marketing</h3>
+        <p>
+          We are a passionate digital design agency that specializes in beautiful and easy-to-use digital design & web
+          development services.This theme does everything you could possibly want it to do and, it is beautifully
+          designed.
+        </p>
+      </li>
+    </ul>
+  </section>
+
+  <!-- main-grid -->
+  <section class="main-grid">
+    <ul class="main-grid-wrapper grid">
+      <li class="main-grid-bg1">
+        <h3>Branding</h3>
+      </li>
+      <li class="main-grid-bg2">
+        <h3>Development</h3>
+      </li>
+      <li class="main-grid-bg3">
+        <h3>Analysis</h3>
+      </li>
+      <li class="main-grid-bg4">
+        <h3>Marketing</h3>
+      </li>
+      <li class="main-grid-bg5">
+        <h3>Design</h3>
+      </li>
+      <li class="main-grid-bg6">
+        <h3>Strategy</h3>
+      </li>
+      <li class="main-grid-bg7">
+        <h3>Strategy</h3>
+      </li>
+    </ul>
+  </section>
+
+  <!-- main-business -->
+  <section class="main-business">
+    <h2 class="main-title">
+      Our Business
+    </h2>
+    <p class="main-des">
+      We are a passionate digital design agency that specializes <br> in beautiful and easy-to-use
+      digital design &amp;
+      web
+      development services.</p>
+    <div class="main-business-list grid space">
+      <figure>
+        <img src="./assets/images/img-01.jpg" alt="Brokerage & Trading">
+        <figcaption>
+          <strong>This theme does everything you could possibly want it to do</strong>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/images/img-02.jpg" alt=" Inverstment Banking">
+        <figcaption>
+          <strong>This theme does everything you could possibly want it to do</strong>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src=" ./assets/images/img-03.jpg" alt="Contracts & Research">
+        <figcaption>
+          <strong>This theme does everything you could possibly want it to do</strong>
+        </figcaption>
+      </figure>
+      <figure>
+        <img src="./assets/images/img-04.jpg" alt="Award winning agency">
+        <figcaption>
+          <strong>This theme does everything you could possibly want it to do</strong>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- main-youtube -->
+  <section class="main-youtube">
+    <div class="main-youtube-txt grid space">
+      <h2 class="main-title">Our Youtube</h2>
+      <p>
+        In an ideal world this text wouldn't exist, a client would acknowledge the importance of having web copy
+        before
+        the design starts. Needless to say it's very important, content is king and people are beginning to understand
+        that. However, back over in reality some project schedules and budgets don't allow for web copy to be written
+        before the design phase, this is sad but true.
+      </p>
+    </div>
+    <div class="main-youtube-video space">
+      <iframe src="https://www.youtube.com/embed/fatYsQ__LW4?si=a1ZK62Dt7X-3RWNy" title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen></iframe>
+    </div>
+  </section>
+
+  <!-- main-survice -->
+  <section class="main-service">
+    <h2 class="main-title">
+      Our Service
+    </h2>
+    <ul class="main-service-gallery space flex">
+      <li>
+        <a href="#"><img src="./assets/images/img-05.jpg" alt="">
+        </a>
+        <div class="service-gallery-txt">
+          <h4>Development</h4>
+          <p>
+            This theme does everything you could possibly want it to do and, it is beautifully designed.
+          </p>
+        </div>
+      </li>
+      <li class="on">
+        <a href="#"><img src="./assets/images/img-06.jpg" alt="">
+        </a>
+        <div class="service-gallery-txt">
+          <h4>Branding</h4>
+          <p>
+            This theme does everything you could possibly want it to do and, it is beautifully designed.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#"><img src="./assets/images/img-07.jpg" alt="">
+        </a>
+        <div class="service-gallery-txt">
+          <h4>Marketing</h4>
+          <p>
+            This theme does everything you could possibly want it to do and, it is beautifully designed.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#"><img src="./assets/images/img-08.jpg" alt="">
+        </a>
+        <div class="service-gallery-txt">
+          <h4>Analysis</h4>
+          <p>
+            This theme does everything you could possibly want it to do and, it is beautifully designed.
+          </p>
+        </div>
+      </li>
+      <li>
+        <a href="#"><img src="./assets/images/img-09.jpg" alt="">
+        </a>
+        <div class="service-gallery-txt">
+          <h4>Strategy</h4>
+          <p>This theme does everything you could possibly want it to do and, it is beautifully designed.</p>
+        </div>
+      </li>
+
+
+    </ul>
+  </section>
+
+  <!-- main-location -->
+  <section class="main-location space">
+    <h2 class="main-title">location</h2>
+    <ul class="location-menu">
+      <li class="location-office active">
+        <h3 class="active">office</h3>
+        <div class="location-map tab-box">
+          <div class="kakao-map"></div>
+          <ul class="location-office-info">
+            <li>
+              <strong>ADDRESS</strong>
+              <span>795 Folsom Ave, Suite 600 San Francisco</span>
+            </li>
+            <li>
+              <strong>TEL</strong>
+              <span>02-1234-5678</span>
+            </li>
+            <li>
+              <strong>SUB</strong>
+              <span>Working at the nexus of aesthetics and sustainability to craft meaningful design ideas that</span>
+            </li>
+            <li>
+              <strong>BUS</strong>
+              <span>This theme does everything you could possibly want it to do and, it is beautifully
+                designed.</span>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="location-factory">
+        <h3>factory</h3>
+        <div class="tab-box">
+          <p>-</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- main-talk -->
+  <section class="main-talk">
+    <div class="color-layer grid">
+      <h2>Let's talk</h2>
+      <p>Herb multiply also earth one you’ll a wherein form creature be.
+        Unto land open creature give their midst together, fruit good thing multiply fill it.</p>
+      <a href="#" class="ghost-btn">contact us</a>
+    </div>
+  </section>
+
+  <!-- footer -->
+  <footer>
+    <div class="footer-info flex">
+      <h2>로고</h2>
+      <div class="footer-info-list">
+        <h3>CONTACT</h3>
+        <p>02 1234 5678
+          <br>from.yami@gmail.com
+        </p>
+      </div>
+      <div class="footer-info-list">
+        <h3>LOCATION</h3>
+        <p>795 Folsom Ave, Suite 600<br>
+          San Francisco, CA 94107</p>
+      </div>
+      <div class="footer-info-list">
+        <h3>SOCIAL</h3>
+        <ul class="footer-social-icon flex">
+          <li><a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 320 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+              </svg>
+            </a></li>
+          <li><a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M224,202.66A53.34,53.34,0,1,0,277.36,256,53.38,53.38,0,0,0,224,202.66Zm124.71-41a54,54,0,0,0-30.41-30.41c-21-8.29-71-6.43-94.3-6.43s-73.25-1.93-94.31,6.43a54,54,0,0,0-30.41,30.41c-8.28,21-6.43,71.05-6.43,94.33S91,329.26,99.32,350.33a54,54,0,0,0,30.41,30.41c21,8.29,71,6.43,94.31,6.43s73.24,1.93,94.3-6.43a54,54,0,0,0,30.41-30.41c8.35-21,6.43-71.05,6.43-94.33S357.1,182.74,348.75,161.67ZM224,338a82,82,0,1,1,82-82A81.9,81.9,0,0,1,224,338Zm85.38-148.3a19.14,19.14,0,1,1,19.13-19.14A19.1,19.1,0,0,1,309.42,189.74ZM400,32H48A48,48,0,0,0,0,80V432a48,48,0,0,0,48,48H400a48,48,0,0,0,48-48V80A48,48,0,0,0,400,32ZM382.88,322c-1.29,25.63-7.14,48.34-25.85,67s-41.4,24.63-67,25.85c-26.41,1.49-105.59,1.49-132,0-25.63-1.29-48.26-7.15-67-25.85s-24.63-41.42-25.85-67c-1.49-26.42-1.49-105.61,0-132,1.29-25.63,7.07-48.34,25.85-67s41.47-24.56,67-25.78c26.41-1.49,105.59-1.49,132,0,25.63,1.29,48.33,7.15,67,25.85s24.63,41.42,25.85,67.05C384.37,216.44,384.37,295.56,382.88,322Z" />
+              </svg>
+            </a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 576 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z" />
+              </svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 384 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
+              </svg></a></li>
+          <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" height="1em"
+                viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path
+                  d="M447.8 153.6c-2 43.6-32.4 103.3-91.4 179.1-60.9 79.2-112.4 118.8-154.6 118.8-26.1 0-48.2-24.1-66.3-72.3C100.3 250 85.3 174.3 56.2 174.3c-3.4 0-15.1 7.1-35.2 21.1L0 168.2c51.6-45.3 100.9-95.7 131.8-98.5 34.9-3.4 56.3 20.5 64.4 71.5 28.7 181.5 41.4 208.9 93.6 126.7 18.7-29.6 28.8-52.1 30.2-67.6 4.8-45.9-35.8-42.8-63.3-31 22-72.1 64.1-107.1 126.2-105.1 45.8 1.2 67.5 31.1 64.9 89.4z" />
+              </svg>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <p>Copyrights &copy; 2020 All Rights Reserved by DYAMI.</p>
+      <ul class="footer-policy">
+        <li><a href="#">Terms of Use</a></li>
+        <li><a href="#">privacy</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <a href="#" class="up-to">위로</a>
+  <script>
+    var swiper = new Swiper(".main-swiper", {
+      spaceBetween: 30,
+      centeredSlides: true,
+      autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+  </script>
+</body>
+
+</html>

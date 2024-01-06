@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>요소실제크기1</title>
+  <style>
+    .box{
+      width: 500px; height: 300px;
+      font-weight: bold;
+    }
+    .box1{
+      border: 10px solid orange;
+      background-color: aquamarine;
+      margin: 10px; padding: 10px;
+    }
+    .box2{
+      outline: 30px solid pink;
+      background-color: skyblue;
+      color: white;
+      margin: 30px; padding: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>요소의 실제 크기1</h1>
+  <h2>width + margin-left + margin-right + padding-left + padding-right + border-left + border-right</h2>
+  <h2>height + maring-top + margin-bottom + padding-top + padding-bottom + border-top + border-bottom</h2>
+
+
+  <div class="box box1">
+    <h3>border</h3>
+    <p>.box1의 실제 너비: w(500)+m(10+10)+p(10+10)+b(10+10) = 560</p>
+    <p>.box1의 실제 너비:h(300)+m(10+10)+p(10+10)+b(10+10) = 360</p>
+  </div>
+  <div class="box box2">
+    <h3>outline</h3> <!-- 레이아웃 구성에서 독자적인 성격이 강해 사용하지 않는 것이 좋다 -->
+    <p>.box2의 실제 너비:w(500)+m(30+30)+p(10+10)+b(0) = 580</p>
+    <p>.box2의 실제 너비:h(300)+m(30+30)+p(10+10)+b(30+30) = 380</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flexEx2</title>
+  <style>
+    body { margin: 0 }
+    .box {
+      font-weight: bold;
+      font-size: 1.4rem;
+      list-style: none;
+      padding: 0;
+      border: 3px solid #000;
+      width: 70vw; height: 70vh;
+      margin: calc(15vh - 6px) auto;
+      /* css 함수 : minmax(), clac(), min(), max()...  */
+
+      display: flex;
+
+      /*
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      align-content: center; 교차축 기준 여러 아이템을 하나의 그룹으로 두고 정렬
+      align-items: center; 교차축 기준 개별 아이템 정렬
+      justify-content: center;주축 기준 정렬 
+      */
+
+      flex-flow: column;/* 주축 col, nowrap 기본값 생략 */
+      align-items: center;
+      justify-content: center;
+    }
+    .box .item {
+      width: 50%;
+      height: 15%;
+      /* line-height: 15%; px, 한 줄때만 가능.  */
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .box .item1 { background-color: #6528F7 ; }
+    .box .item2 { background-color: #A076F9 ; }
+    .box .item3 { background-color: #D7BBF5 ; }
+    .box .item4 { background-color: #EDE4FF ; }
+    .box .item5 { background-color: #A149FA ; }
+  </style>
+</head>
+<body>
+  <!-- 내부 박스, 글자 좌우, 상하 중앙 정렬 -->
+  <ul class="box"><!-- flex-container-->
+    <li class="item item1"><!-- flex-item / flex-container -->
+      item1<br>item<!-- flex-item -->
+    </li>
+    <li class="item item2">item2<br>item</li>
+    <li class="item item3">item3<br>item</li>
+    <li class="item item4">item4<br>item</li>
+    <li class="item item5">item5<br>item</li>
+  </ul>
+</body>
+</html>

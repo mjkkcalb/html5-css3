@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx3</title>
+  <style>
+    body{
+      margin: 0 auto;
+      font-family: 'Monotype Corsiva', '맑은 고딕', '돋움', sans-serif  ;
+    }
+    .menu{
+      list-style: none;
+      display: flex;
+      background-color: white;
+      width: 1000px; height: 50px;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0; 
+      left: 0; right: 0;
+      margin: auto;
+      margin: 0 auto; padding: 0;
+      border-radius: 0 0 20px 20px;
+      font-size: 1.2rem;
+      box-shadow: 0 10px 4px -4px rgba(0,0,0,0.4);
+    }
+    .menu li{
+      padding: 5px 80px;
+    }
+    .menu li a{
+      text-decoration: none;
+      color: black;
+    }
+    .box1{
+      background-color: orange;
+      line-height: 40px;
+    }
+    .box2{
+      background-color: skyblue;
+      line-height: 40px;
+    }
+    .box3{
+      background-color: palevioletred;
+      line-height: 40px;
+    }
+    .box4{
+      background-color: teal;
+      line-height: 40px;
+    }
+    .page1{
+      background-color: orange;
+      width: 100vw; height: 100vh;
+      text-align: center;
+      margin: 0; 
+    }
+    .page2{
+      background-color: skyblue;
+      width: 100vw; height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+    .page3{
+      background-color: palevioletred;
+      width: 100vw; height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+    .page4{
+      background-color: teal;
+      width: 100vw; height: 100vh;
+      text-align: center;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <ul class="menu">
+      <li class="box1"><a href="#page1">Art1</a></li>
+      <li class="box2"><a href="#page2">Art2</a></li>
+      <li class="box3"><a href="#page3">Art3</a></li>
+      <li class="box4"><a href="#page4">Art4</a></li>
+    </ul>
+
+    <h1 class="page1" id="page1">article1</h1>
+    <h1 class="page2" id="page2">article1</h1>
+    <h1 class="page3" id="page3">article1</h1>
+    <h1 class="page4" id="page4">article1</h1>
+  </div>
+</body>
+</html>

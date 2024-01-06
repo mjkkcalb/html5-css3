@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>indexEx1</title>
+  <meta name="description" content="웹사이트를 만들어 봅시다">
+  <!-- og -->
+  <meta property="og:title" content="webEx">
+  <meta property="og:url" content="webEx">
+  <meta property="og:image" content="https://github.com/mjkkcalb">
+  <meta property="og:description" content="https://github.com/mjkkcalb/image/이미지선택">
+  <meta property="og:type" content="website">
+  <!-- favicon -->
+  <!-- <link rel="shortcut icon" href=""> -->
+  <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="theme-color" content="#ffffff">
+  <!-- 
+    .webmanifast
+    웹 기술 모음집의 일부로 앱 스토어를 거치지 않고 장치의 홈 화면에 설치
+    사전 다운로드를 통해 오프라인에서도 동작
+    웹 앱 정보를 json 텍스트 파일로 제공
+    주로 아이콘, 작성자, 버전, 설명 등의 필요한 리소스 등을 작성
+   -->
+
+   <!-- 초기화 css는 무조건 제일 먼저 써야한다 -->
+   <link rel="stylesheet" href="./reset.css">
+   <!-- 웹폰트 설정 css -->
+   <link rel="stylesheet" href="./fonts.css">
+   <!-- 내가 작성한 header,foorer css -->
+   <link rel="stylesheet" href="./header.css">
+   <link rel="stylesheet" href="./footer.css">
+   <!-- 내가 작성한 css -->
+   <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="container">
+    <!-- <header></header>
+    <nav></nav>
+    <div class="contents"></div>
+    <footer></footer> -->
+
+    <!-- header 영역 -->
+    <header>
+      <h1><em>kim's kitchen</em>Cooking class</h1>
+      <menu class="global_menu">
+        <li><a href="#">홈</a></li>
+        <li><a href="#">소개</a></li>
+        <li><a href="#">교실</a></li>
+        <li><a href="#">케이터링</a></li>
+        <li><a href="#">연락처</a></li>
+      </menu>
+    </header>
+    
+    <!-- main 영역 -->
+    <main>
+
+      <article>
+        <div class="box">
+          <figure>
+            <img src="./images/6138906703_4f8c6e0809_o.jpg" alt="oriental salad">
+            <figcaption>oriental salad</figcaption>
+          </figure>
+          <div class="txt_wrapper">
+          <h2>채식주의자</h2>
+          <h3>런던에서의 5주 코스</h3>
+          <p>5주간 채식주의자 음식에 대해 소개하고 쌀과 국수 요리를 가르친다.</p>
+        </div>
+        </div>
+        
+
+        <div class="box">
+          <figure>
+            <img src="./images/gv20000264880_1.jpg" alt="teriyaki">
+            <figcaption>teriyaki</figcaption>
+          </figure>
+          <div class="txt_wrapper">
+          <h2>소스 마스터클래스</h2>
+          <h3>1일 워크샵</h3>
+          <p>1일 집중 코스에서는 다양한 요리에서 사용할 수 있는 가장 맛있는 소스를 만드는 방법을 살펴본다.</p>
+        </div>
+        </div>
+
+      </article>
+
+      <aside>
+        <H2>인기요리법</H2>
+          <ul class="recipe">
+            <li><a href="#">후라이드</a></li>
+            <li><a href="#">고추바사삭</a></li>
+            <li><a href="#">뿌링클</a></li>
+            <li><a href="#">간지</a></li>
+          </ul>
+
+        <H2>연락처</H2>
+        <address>경기 수원시 팔달구 매산동</address>
+      </aside>
+    </main>
+
+    <!-- footer 영역 -->
+    <footer>
+      &copy; Kim's kitchen 김씨네 키친
+    </footer>
+  </div>
+</body>
+</html>

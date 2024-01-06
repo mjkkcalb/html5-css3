@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>table style Ex3</title>
+  <style>
+    h2{
+      text-align: center;
+    }
+    table, th, td{
+      border: 1px solid black;
+      padding: 10px 30px;
+      text-align: center;
+      border-collapse: collapse;
+      margin: 0 auto;
+      background-color: rgb(140, 185, 72);
+    }
+    .box2{
+      background-color: white;
+    }
+    .box3{
+      background-color: white;
+    }
+    .box4 td{
+      background-color: rgb(255, 196, 0);
+    }
+  </style>
+</head>
+<body>
+  <h2>테이블 스타일 연습 2</h2>
+  <table class="box1">
+    <caption>소</caption>
+    <tr>
+      <td>소머리</td>
+      <td>목심</td>      
+      <td>등심<br>&#40;살치살.<a href="#">꽃등심</a>&#41;</td>
+      <td>채끝살</td>
+      <td>우둔<br>&#40;홍두깨살&#41;</td>
+    </tr>
+    <tr>
+      <td rowspan="4" class="box2"></td>
+      <td rowspan="2">앞다리살<br>&#40;부채살&#41;</td>
+      <td>갈비<br>&#40;안창상. 제비추리&#41;</td>
+      <td>안심</td>
+      <td rowspan="2">설도<br>&#40;도가니살&#41;</td>
+    </tr>
+    <tr>
+      <td colspan="2">양지<br>&#40;차돌박이. 우삼겹&#41;</td>
+    </tr>
+    <tr>
+      <td>사태</td>
+      <td rowspan="2" colspan="2" class="box3"></td>
+      <td>사태<br>&#40;아롱사태&#41;</td>
+    </tr>
+    <tr class="box4">
+      <td>우족</td>
+      <td>우족</td>
+    </tr>
+  </table>
+  
+</body>
+</html>

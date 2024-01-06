@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>positionEx1</title>
+  <style>
+    .container{
+      font-size: 1.5rem;
+      background-color: aqua;
+      margin: 50px auto;
+      width: 500px; height: 500px;
+      position: relative; /* 위치 특성값과 함께 작성하지 않으면 기존 흐름을 유지한 채 li */
+    }
+    .container li{
+      list-style: none;
+    }
+    .box{
+      background-color: yellow;
+      width: 50px; height: 50px;
+      text-align: center;
+      list-style: none;
+      line-height: 50px;
+      font-weight: bold
+    }
+    .container .box1{
+      position: absolute;
+      top: 0; left: 0;
+    }
+    .container .box2{
+      position: absolute;
+      top: 0; right: 0;
+    }
+    .container .box3{
+      position: absolute;
+      bottom: 0; left: 0;
+    }
+    .container .box4{
+      position: absolute;
+      bottom: 0; right: 0;
+    }
+    .container .box5{
+      position: absolute;
+      /* top: 250px; left: 250px; */
+      top: 0; left: 0; bottom: 0; right: 0;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+  <ul class="container">
+    <li class="box box1">1</li>
+    <li class="box box2">2</li>
+    <li class="box box3">3</li>
+    <li class="box box4">4</li>
+    <li class="box box5">5</li>
+  </ul>
+</body>
+</html>

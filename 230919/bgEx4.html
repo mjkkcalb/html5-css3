@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>{title}</title>
+  <style>
+     form{
+      border: 3px solid black;
+      width: 400px;
+      margin: 50px auto;
+      padding: 30px;
+      border-radius: 20px;
+     }
+     input{
+      outline: none;
+      display: block;
+      margin: 10px auto; padding: 10px;
+      border: 1px solid black;
+      border-radius: 25px;
+      width: 80% ;
+      font-size: 1.1rem;
+      /* padding: 10px 10px 10px 50px;
+      box-sizing: border-box; */
+      padding: 10px;
+      text-indent: 40px;/* 들여쓰기 */
+      background-repeat: no-repeat;
+      background-position: 10px ;
+      background-size: 25px;
+     }
+
+     form input[type="text"]{
+      background-image: url(./images/user-large-solid.svg);
+     }
+     form input[type="email"]{
+      background-image: url(./images/envelope-solid.svg);
+     }
+     form input[type="tel"]{
+      background-image: url(./images/phone-solid.svg);
+     }
+     
+     form input:hover, form input:focus {
+      background-color: silver;
+      color: blue;
+     }
+     form input::placeholder{
+      color: rgb(130, 68, 138);
+     }
+  </style>
+</head>
+<body>
+  <form>
+      <input type="text" placeholder="이름을 입력하세요" id="user_name">
+      <input type="email" placeholder="이메일을 입력하세요" id="userEmail">
+      <input type="tel" placeholder="연락처를 입력하세요" id="tel">
+  </form>
+</body>
+</html>

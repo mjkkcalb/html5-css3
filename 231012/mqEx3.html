@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>mqEx3</title>
+  <style>
+    .container {
+      margin: 0 auto;
+      padding: 80px 50px;
+      background-color: rgb(98, 156, 156);
+      display: grid;
+      gap: 1ch;
+
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr))
+    }
+
+    .container .item {
+      background-color: rgb(255, 251, 213);
+      display: grid;
+      place-self: center center;
+      width: 100px;
+      height: 30px;
+      place-items: center;
+    }
+
+    .container .item4 {
+      display: none;
+    }
+
+    @media (width >=768px) {
+
+      .container .item10 {
+        display: none;
+      }
+    }
+
+    @media (width >=960px) {
+      .container .item10 {
+        display: inline;
+        background-color: rgb(54, 92, 99);
+        color: white;
+      }
+    }
+
+    @media (width >=1200px) {
+      .container {
+        width: 80%;
+      }
+
+      .container .item4 {
+        display: block;
+        text-align: center;
+        line-height: 30px;
+      }
+
+      .container .item10 {
+        display: inline;
+        background-color: rgb(54, 92, 99);
+        color: white;
+        line-height: 30px;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item item1">item1</div>
+    <div class="item item2">item2</div>
+    <div class="item item3">item3</div>
+    <div class="item item4">item4</div>
+    <div class="item item5">item5</div>
+    <div class="item item6">item6</div>
+    <div class="item item7">item7</div>
+    <div class="item item8">item8</div>
+    <div class="item item9">item9</div>
+    <div class="item item10">item10</div>
+  </div>
+</body>
+
+</html>

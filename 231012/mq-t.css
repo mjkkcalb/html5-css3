@@ -1,0 +1,21 @@
+@charset "utf-8";
+
+/* 768px */
+@media (width >=768px) {
+  h1 {
+    background-color: salmon;
+  }
+
+  h1 strong {
+    display: inline;
+  }
+
+  h2 {
+    background-color: darkcyan;
+  }
+
+  .container {
+    width: 70%;
+    margin: 0 auto;
+  }
+}

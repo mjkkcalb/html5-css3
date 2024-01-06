@@ -1,0 +1,56 @@
+@charset "utf-8";
+
+h1 {
+  background-color: rgb(27, 186, 248);
+  color: white;
+  font-family: '휴먼매직체', '맑은 고딕', '돋움', sans-serif;
+  font-size: 35px;
+  text-align: center;
+}
+#one {
+  background-color: rgb(238, 238, 238);
+  text-align: center;
+  line-height: 1.6;
+}
+section > h2 {
+  color: rgb(255, 115, 0);
+  text-decoration: underline;
+  text-align: center;
+  font-size: 35px;
+}
+
+.memo {
+  color: red;
+  font-size: 15px;
+}
+
+a:link {
+  background-color: rgb(4, 1, 53);
+  color: white;
+  font-size: 25px;
+}
+
+a:visited{
+  color: white;
+}
+
+#two {
+  background-color: antiquewhite;
+  text-align: left;
+  line-height: 1.6;
+}
+
+h3 {
+  background-color:rgb(27, 186, 248);
+  font-size: 23px;
+  text-align: right;
+  color: white;
+}
+
+.memo2 {
+  background-color: rgb(255, 131, 30);
+}
+.memo3 {
+  color: red;
+  font-size: 15px;
+}

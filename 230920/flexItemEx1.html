@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>flex-itmeEx1</title>
+  <style>
+    body{
+      margin: 0;      
+    }
+
+    .container {
+      background-color: aquamarine;
+      height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .container header{
+      background-color: brown;
+      height: 14vh; width: 100%;
+      order: 1;
+    }
+    .container main{
+      background-color: skyblue;
+      flex-grow: 2; /* width 75% */
+      order: 3;
+      height: 86vh;
+    }
+    .container aside{
+      background-color: white;
+      flex-grow: 1; /* width 25%*/
+      order: 2;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>header</header>
+    <main>contant</main>
+    <aside>aside</aside>
+  </div>
+</body>
+</html>

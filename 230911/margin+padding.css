@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+body{
+  font-family: '나눔스퀘어라운드', '맑은 고딕', '돋움', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+}
+h1{
+  background-color: aqua;
+  width: 500px;
+  min-width: 400px; /*최소 가로값이 400px 유지 + width 와 함께쓰면 좋다 */
+  color: #fff;
+  border-bottom: pink 8px solid;
+  border-radius: 20px 20px 0 0;
+  margin: 40px auto;
+  padding: 5px 10px;
+}
+h2{
+  text-decoration: line-through;
+  font-size: 22px;
+  /*background-color: #ddd;
+  width: 200px;*/
+}
+ul li{
+  border: 1px solid black;
+  width: 300px;
+  margin: 4px auto;
+  padding: 4px;
+  text-align: left;
+}
+.url{
+  background-color: #eed9e9;
+  width: 60%;
+  min-width: 300px;
+  padding: 10px 0;
+  margin: 5px auto;
+}
+
+.url a, .wrapper.site a{ /* a태그 성격이 강하기 때문에 직접 넣어줘야 한다*/ 
+  text-decoration-line: none;
+  color: #fff;
+}
+.url:visited{
+color: gray;
+}
+.url:hover{
+background-color: rgb(209, 88, 209);
+color: aliceblue;
+}
+a:active{
+color: yellow;
+}
+
+.wrapper{
+  width: 60%;
+  min-width: 300px;
+  margin: 50px auto;
+  }
+.wrapper.site {
+  background-color: olive;
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  line-height: 40px; /* "한 줄인 경우" 세로 중앙 정렬 방법 
+  height 와 line height의 값을 동일하게 적용, 폰트 사이즈의 크기가 큰 경우는 잘 안됨 */
+}

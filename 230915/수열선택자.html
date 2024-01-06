@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>수열선택자</title>
+  <style>
+    .box{
+      display: flex;
+      line-height: 100px;
+      justify-content: center; align-items: center;
+      flex-wrap: wrap;
+      width: 500px;
+      /* gap: 15px; p와 div에 margin 값을 줘서 간격 조절하거나 gap을 사용할 수도 있다*/
+      margin: 50px auto;
+    }
+    .box p, .box div{
+      text-align: center;
+      font-weight: bold;
+      font-size: 1.2rem;
+      width: 100px; height: 100px;
+      background-color: antiquewhite;
+      border-radius: 50%;
+      margin: 10px;
+    }
+    /*
+    수열 선택자, 의사 클래스
+    :first-child {} 같은 부모를 둔 자식들 중 첫번째 자식
+    :last-child {} 같은 부모를 둔 자식들 중 마지막 자식
+    :nth-child {} 같은 부모를 둔 자식들 중 n째 자식
+
+    :first-of-type {} 같은 부모를 둔 자식들 중 '같은 타입'의 첫번째 자식
+    :last-of-type {} 같은 부모를 둔 자식들 중 '같은 타입'의 마지막 자식
+    :nth-of-type(n) {} 같은 부모를 둔 자식들 중 '같은 타입'의 n번째 자식
+
+    (even) 짝수
+    (odd) 홀수
+    (3n+1) 3개를 기준으로 첫번째
+    (3n) 3번째
+    */
+    
+    .box p:first-child {/* 같은 부모를 둔 자식들 중 처음 나오는 요소가 p인 경우 적용 */
+    background-color: tomato;
+  }
+    .container div:first-child { /* 같은 부모를 둔 자식들 중에서 처음 나오는 요소가 div가 아니기 때문에 적용되지 않는다*/
+    background-color: red;
+  }
+  .container div:first-of-type {/*같은 부모를 둔 자식들 중 같은 타입의 첫번째 div에 적용*/
+    background-color: red;
+  }
+  .box div:last-of-type {/* 각 부모 안에서 같은 타입의 자식들 중 마지막 div에 적용*/
+    background-color: orange;
+  }
+  .box p:last-child {/* 가장 마지막에 나오는 자식이 p여야지만 적용*/
+  background-color: brown;
+  }
+  .box p:nth-child(6) { /* 자식들 중 6번째 위치에 p가 있으면 적용*/
+    border: 3px solid black;
+  }
+  .box p:nth-child(10) {/* 자식들 중 6번째 위치에 div가 있기 때문에 적용 x */
+    border: 3px solid red;
+  }
+  .box div:nth-of-type(2){
+    color: blue;
+  }
+  .container p:nth-child(even){/* 짝수(even) 위치의 p*/
+    background-color: rosybrown;
+  }
+  .wrapper p:nth-child(odd){ /* 홀수(odd) 위치의 p*/
+    background-color: rgb(185, 126, 55);
+  }
+  .container :nth-child(odd) { /* 실제하는 요소 없이 작성시 요소 구분 없이 적용*/
+    font-style: italic;
+  }
+  .container *:nth-child(even) { /* 요소 구분 없이 적용*/
+    text-decoration: line-through;
+  }
+  .container p:nth-child(4n+3){ /* 4개를 기준으로 3번째*/
+    border-radius: 50% 0;
+  }
+  .wrapper p:nth-child(5n+5){/*5개를 기준으로 5번째*/
+    border:3px dotted green;
+  }
+  .wrapper :nth-child(n+3):nth-child(-n+11){/* 3번부터 11번째까지 선택*/
+
+  }
+  .wrapper :nth-child(2n+5):nth-child(-n+11){/* 5번부터 11번까지 선택하되 2개중 첫번째에 적용*/
+    color: aqua;
+  }
+  </style>
+</head>
+<body>
+  <h1>수열선택자 - 의사클래스</h1>
+  <div class="box container">
+    <p>01</p>
+    <p>02</p>
+    <p>03</p>
+    <div>d4</div>
+    <div>d5</div>
+    <p>06</p>
+    <p>07</p>
+    <p>08</p>
+    <p>09</p>
+    <div>d10</div>
+    <p>11</p>
+    <p>12</p>
+    <p>13</p>
+    <p>14</p>
+    <p>15</p>
+    <p>16</p>
+    <p>17</p>
+    <p>18</p>
+    <div>d19</div>
+    <p>20</p>
+    <div>d21</div>
+  </div>
+  <div class="box wrapper">
+    <p>w01</p>
+    <p>w02</p>
+    <p>w03</p>
+    <p>w04</p>
+    <div>div5</div>
+    <div>div6</div>
+    <p>w07</p>
+    <p>w08</p>
+    <p>w09</p>
+    <p>w10</p>
+    <p>w11</p>
+    <p>w12</p>
+    <p>w13</p>
+    <p>w14</p>
+  </div>
+</body>
+</html>

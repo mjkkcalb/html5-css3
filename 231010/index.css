@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+/* 변수 선언 */
+@import url(./assets/styles/variable.css);
+/* google icon */
+@import url(https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0);
+
+@import url(./assets/styles/common.css);
+@import url(./header.css);
+@import url(./footer.css);
+
+/**** contents ****/
+/** .main-video **/
+.main-video {
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  position: relative;
+  color: white;
+
+  background: url(./assets/images/main_diag1.png) no-repeat 0 0,
+    url(./assets/images/main_diag2.png) no-repeat 0 0,
+    url(./assets/images/main_diag3.png) no-repeat 0 40%,
+    url(./assets/images/main_diag4.png) no-repeat 0 100%,
+    url(./assets/images/main_diag5.png) no-repeat 0 100%,
+    url(./assets/images/main_diag6.png) no-repeat 100% 100%,
+    url(./assets/images/main_diag7.png) no-repeat 100% 100%,
+    url(./assets/images/main_bg_check.png);
+}
+.main-video .youtube {
+  width: 100%;
+  aspect-ratio: 16/9;
+  z-index: -1;
+  position: relative;
+}
+.main-video .main-video-txt {
+  position: absolute;
+  left: 6vw;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: left;
+  font-style: italic;
+}
+.main-video .main-video-txt h2 {
+  font-size: var(--font-size-vid-title1);
+  font-family: var(--main-font-en);
+  font-weight: 900;
+  text-shadow: 1px 1px #000;
+  line-height: 1;
+}
+.main-video .main-video-txt h2 span {
+  font-size: var(--font-size-vid-title2);
+  font-weight: 500;
+  display: block;
+  text-indent: 30px;
+}
+.main-video .main-video-txt p {
+  width: 50%;
+  margin: 50px 0;
+}
+.main-video .main-widget {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: var(--font-size-14);
+}
+.main-video .main-widget li {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin: 10px 0;
+}
+.main-video .main-widget li:hover {
+  background-image: linear-gradient(45deg, var(--point-color), orange);
+}
+.main-video .main-widget li a {
+  display: block;
+  background: no-repeat 50% 20%;
+  padding-top: 50px;
+}
+.main-video .main-widget li:first-child a {
+  background-image: url(./assets/images/main_reserve_icon1_2108.png);
+}
+.main-video .main-widget li:last-child a {
+  background-image: url(./assets/images/main_reserve_icon2_2108.png);
+}
+/** glance **/
+.glance .glance-list {
+  justify-content: center;
+  max-width: 1800px;
+  margin: 70px auto;
+}
+.glance .glance-list li {
+  width: 23%;
+  border-right: 1px solid #ddd;
+  background: no-repeat 50% 15%;
+  padding: 100px 0 0;
+}
+.glance .glance-list li:nth-child(1) {
+  background-image: url(./assets/images/icon_mg_calendar.png);
+}
+.glance .glance-list li:nth-child(2) {
+  background-image: url(./assets/images/icon_mg_user.png);
+}
+.glance .glance-list li:nth-child(3) {
+  background-image: url(./assets/images/icon_mg_user.png);
+}
+.glance .glance-list li:nth-child(4) {
+  background-image: url(./assets/images/icon_mg_ship.png);
+  border: none;
+}
+.glance .glance-list h3 {
+  font-weight: 300;
+}
+.glance .glance-list h3 strong {
+  font-size: var(--font-size-count);
+  font-family: var(--main-font-en);
+  font-weight: 700;
+}
+.glance .glance-list h3::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 1px;
+  background-color: #222;
+  margin: 20px auto;
+}
+.glance .glance-list h4 {
+  color: #1f4172;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/** business **/
+.business .business-wrapper {
+  position: relative;
+}
+.business .business-wrapper .business-txt {
+  background-color: #eee;
+  width: 50%;
+  position: relative;
+}
+.business .business-wrapper .business-txt::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 100%;
+  background-color: #eee;
+  width: 100px;
+  height: 100%;
+}
+.business .business-wrapper .business-txt .business-menu {
+  justify-content: center;
+  margin: 50px 0;
+}
+.business .business-wrapper .business-txt .business-menu a {
+  margin: 10px;
+  display: block;
+  position: relative;
+}
+.business .business-wrapper .business-txt .business-menu a.active::after {
+  content: "";
+  width: 100%;
+  height: 3px;
+  background-color: var(--point-color);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.business .business-wrapper .business-txt h3 {
+  font-size: var(--font-size-title);
+}
+.business .business-wrapper .business-txt p {
+  font-size: var(--font-size-14);
+  color: #666;
+  width: 60%;
+  margin: 20px auto;
+  line-height: 1.6;
+}
+.business .business-wrapper .business-txt .business-img-list {
+  justify-content: center;
+}
+.business .business-wrapper .business-txt .business-img-list li {
+  margin: 1vw 0.5vw 5vw;
+}
+.business .business-wrapper .business-img {
+  width: 50%;
+  position: relative;
+  top: 50px;
+}
+.business .business-wrapper .business-img img {
+  height: 60vh;
+  object-fit: cover;
+}
+.business .business-wrapper .more-btn {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+}
+/** location **/
+.location {
+  background: url(./assets/images/bg_worldmap.png) no-repeat 50% 30% / 120%;
+}
+.location .location-list {
+  justify-content: center;
+}
+.location .location-list a {
+  display: block;
+  font-family: var(--main-font-en);
+  font-weight: 700;
+  margin: 30px 10px;
+}
+.location .location-list a:hover,
+.location .location-list a.on {
+  color: var(--point-color);
+}
+.location .location-kakao {
+  width: 90%;
+  margin: 20px auto 50px;
+  background-color: #ddd;
+  aspect-ratio: 3/1;
+}
+/** contact **/
+.contact .contact-wrapper {
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2.5vw;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+.contact .contact-wrapper .press {
+  transition: 0.3s;
+  /* flex-grow: 2; */
+  width: 40%;
+  padding-bottom: 80px;
+  color: white;
+
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)),
+    url(./assets/images/1.png) no-repeat 50% / cover;
+}
+.contact .contact-wrapper .press:hover {
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)),
+    url(./assets/images/1.png) no-repeat 50% / cover;
+}
+.contact .contact-wrapper .press h3 {
+  background-color: var(--point-color);
+  width: 130px;
+  padding: 10px;
+  font-size: var(--font-size-18);
+}
+.contact .contact-wrapper .press h4 {
+  font-size: var(--font-size-title);
+  margin: 30px 80px;
+  overflow: hidden;
+  /* 한줄 말줄임 ...
+  text-overflow: ellipsis; 말줄임
+  white-space: nowrap; 자동 줄바꿈 금지
+  width: 200px; */
+  /* 여러 줄 말줄임 */
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2; /*여러 줄일 때 텍스트 자르는 줄 */
+  -webkit-box-orient: vertical; /*박스 진행 방향*/
+  /* 
+  -webkit- 벤더 : 정식 버전으로 출시 되기 전 개발자들이 사용할 수 있게 만들어 놓은 약속어
+  (-ms-), -o-, -moz-
+  */
+}
+.contact .contact-wrapper .press .press-date {
+  margin: 30px 0 10px;
+}
+
+.contact .contact-wrapper .notice {
+  /*felx-item / flex-container */
+  /* align-self: flex-start; 위로 올리기 */
+  /* flex-grow: 2; */
+  width: 40%;
+  text-align: left;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px 0;
+}
+.contact .contact-wrapper .notice h3 {
+  font-family: var(--main-font-en);
+  font-weight: 700;
+  font-size: var(--font-size-title);
+  text-transform: capitalize;
+}
+.contact .contact-wrapper .notice .ghost-btn {
+  border-color: #666;
+}
+.contact .contact-wrapper .notice .notice-list {
+  width: 100%;
+  margin: 30px 0;
+}
+.contact .contact-wrapper .notice .notice-list li {
+  border-bottom: 1px solid #999;
+  padding: 16px 6px;
+  list-style: inside hyphen;
+  font-size: 14;
+  color: #999;
+}
+/* https://developer.mozilla.org/en-US/docs/Web/CSS/@counter-style */
+@counter-style hyphen {
+  system: cyclic; /*같은 값 반복*/
+  symbols: "-";
+  suffix: " "; /* 머릿말 기호 다음 처리 방식*/
+}
+@counter-style emoji {
+  system: cyclic;
+  symbols: "🙉";
+  suffix: ":";
+}
+.contact .contact-wrapper .notice .notice-list li a {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  /* display: inline-block; 
+  width: 50%; */
+}
+.contact .contact-wrapper .notice .notice-list li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+  color: #000;
+}
+.contact .contact-wrapper .notice .notice-list li .notice-date {
+  float: right; /* 요소의 진행 방향 설정. left, rigth 두 값만 있음. 부모 요소의 높이값을 인식하지 못하기 때문에 최근엔 잘 사용하지 않으며 사용시 clearfix값이나 overflow값이 필요 */
+}
+.contact .contact-wrapper .notice .notice-list li .notice-date::before {
+  font-family: "Material Symbols Outlined";
+  content: "schedule";
+  vertical-align: bottom;
+  margin-right: 4px;
+}
+.contact .contact-wrapper .recruit {
+  align-self: stretch;
+  /* flex-grow: 1; */
+  width: 20%;
+  background: url(./assets/images/bg_main_recruit.png) no-repeat 50% / cover;
+  text-align: left;
+  padding: 20px 30px;
+  position: relative;
+}
+.contact .contact-wrapper .recruit h3 {
+  color: var(--point-color);
+  font-size: var(--font-size-title);
+  font-family: var(--main-font-en);
+  font-weight: 700;
+}
+.contact .contact-wrapper .recruit p {
+}
+.contact .contact-wrapper .recruit .more-btn {
+  position: absolute;
+  bottom: 2 0px;
+  left: 50%;
+  transform: translateX(-50%);
+}

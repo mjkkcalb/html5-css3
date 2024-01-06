@@ -1,0 +1,112 @@
+@charset "utf-8";
+/**** header ****/
+
+.container header h1{
+  box-sizing: border-box;
+  color: white;
+  height: 130px;
+  font-family: 'Playfair Display',serif;
+  font-size: 36px;
+  font-style: italic; /*글 기울이기*/
+  line-height: 0.9;
+  background: #7d1e6a url(./images/Leica_Camera.svg.png) no-repeat 25px 50% / 90px;
+  padding: 28px 0 0 130px;
+  /* 
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center; 
+  */
+} 
+.container header h1 em{
+  display: block;
+  font-family: 'Croissant One',cursive;
+  font-size: 36px;
+} 
+
+.container header .global_menu{
+  background-color: #ffcd38;
+  color: #7d1e6a;
+  font-weight: 700;
+  display: flex;
+} 
+.container header .global_menu li a{
+  display: block;
+  width: 90px; height: 46px;
+  text-align: center;
+  line-height: 46px;
+}
+.container header .global_menu li a:hover{
+  background-color: #e4010b;
+  color: white;
+}
+
+/**** main ****/
+
+.container main{
+  display: flex;
+}
+.container main article{
+  background-color: #f1eee0;  
+  /* width: 650px; 650 / 932 *100 = */
+  width: 70%;
+  padding: 30px 20px;
+}
+.container main article .box{
+  display: flex;
+  margin-bottom: 40px;
+}
+.container main article .box figure{
+  background-color: #fff;
+  border: 1px solid red;
+  text-align: right;
+  color: #9c999c;
+  font-style: italic;
+  font-size: 14px;
+  padding: 8px;
+  line-height: 2;
+  margin-right: 20px;
+}
+.container main article .box figure figcaption{
+  margin-top:8px;
+}
+.container main article .box .txt_wrapper{
+  width: 280px;
+}
+.container main article .box .txt_wrapper h2{
+ font-weight: 700;
+ font-size: 1.6rem;
+}
+.container main article .box .txt_wrapper h3{
+  font-weight: 500;
+  margin: 5px 0;
+  color: red;
+}
+
+
+.container main aside{ 
+  /* width: 282px; container 932 - article 650 = 282 */
+  width: 30%;
+  border-left: 1px solid red;
+}
+.container main aside h2{
+  color: red;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin: 30px 20px;
+}
+.container main aside .recipe a{
+  display: block;
+  font-size: 1.5rem;
+  border-bottom: 1px solid red;
+  padding: 20px 0 12px 20px;
+}
+.container main aside .recipe a:hover{
+  background-color: red;
+  color: #fff;
+}
+.container main aside address{
+  margin: 30px 20px;
+  font-weight: 500;
+}
+

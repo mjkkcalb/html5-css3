@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>마우스 이벤트</title>
+  <style>
+
+    ::selection{
+      background-color: rgb(173, 122, 221);
+      color: aliceblue;
+    }
+    /* 서체 변경, 사이즈, 서체 색상. 행간 조절 */
+    body {
+      background-color: rgb(224, 234, 248);
+      font-family: '휴먼엑스포', '맑은 고딕', '돋움', sans-serif;
+      font-size: 20px;
+      line-height: 1.6;
+      color: brown;
+    } 
+    h1 {
+      color: blue;
+      font-size: 40px;
+      font-family: '나눔고딕', '맑은고딕', '돋움', sans-serif;
+      font-weight: bold;
+      font-style: normal;
+      text-transform: capitalize
+    }
+
+    h1::selection{
+      background-color: aquamarine;
+    }
+    /* :,:: 
+      가상 선택자로 다양한 종류가 있으며 주로 실제하는 요소와 함께 작성 / 의사 클래스, 의사 요소, 수열 선택자 등등
+      :link, :visited, :hover, :focus, :checked ... 
+    
+    */
+    
+    a:link{ /*링크 상태일때 (기본) **/
+      color: rgb(219, 149, 57);
+      text-decoration: none;/*밑줄 없애기*/
+    }
+    a:visited{/* 방문 했을 때 */
+      color: rgb(165, 42, 149);
+    }
+    a:hover {/* 마우스를 위에 올렸을 때 */
+      color: rgb(143, 165, 20);
+      text-decoration: line-through;
+    }
+    a:active {/* 클릭했을 때 */
+      background-color: beige;
+    }
+    a{/*기본값은 밑줄, 글자 색상으로 변경하려면 직접 적용해야 함*/
+      color: inherit; /*상속*/
+      text-decoration: none;
+    }
+    </style>
+</head>
+
+<body>
+  <h1>마우스 이벤트 mouse event</h1>
+  <ul>
+    <li class="deco1"><a href="https://www.naver.com/" target="_blank">네이버</a></li>
+    <li class="deco2"><a href="https://www.daum.net/" target="_blank">다음</a></li>
+    <li class="deco3"><a href="https://www.instagram.com/" target="_blank">인스타그램</a></li>
+    <li class="deco4"><a href="https://www.google.co.kr/" target="_blank">구글</a></li>
+    <li class="deco5"><a href="https://www.facebook.com/" target="_blank">페이스북</a></li>
+    <li class="deco6"><a href="https://twitter.com/" target="_blank">트위터</a></li>
+    <!-- li*5(복사 원하는 숫자)>a>{다음} enter 치면 복사 된다 -->
+  </ul>
+</body>
+
+</html>

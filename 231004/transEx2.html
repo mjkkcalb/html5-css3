@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>transEx2</title>
+  <style>
+    /* 혼자 해본건데 안돌아감
+    .menu-icon{
+      width: 100px; height: 100px;
+      background-color: gray;
+      position: absolute;
+      top: 10px; right:  10px;
+      text-align: center;
+      line-height: 100px;
+    }
+
+     .close{
+      width: 50px; height: 50px;
+      opacity: 0.8;
+    }
+    .close::before, .close::after{
+      position: absolute;
+      top: 10px;
+      right: 50px;
+      content: ' ';
+      height: 80px;
+      width: 2px;
+      background-color: black;
+    }
+    .close::before{
+      transform: rotate(45deg);
+    }
+    .close::after{
+      transform: rotate(-45deg);
+    }
+    .menu-icon:hover .close{
+      transform: rotate(360deg);
+    } */
+
+    .menu-icon{
+      background-color: black;
+      width: 80px; height: 80px;
+      position: fixed;
+      top: 30px; right: 30px;
+      cursor: pointer;
+    }
+    .menu-icon .btn-close{
+      transition: 0.6s;
+      color: white;
+      text-indent: -9999px;
+      height: 100%;
+      /* background-color: #ddd; */
+    }
+    .menu-icon .btn-close::before, .btn-close::after{
+      content: " ";
+      width: 16%; height: 60%;
+      background-color: rgb(168, 47, 47);
+      position: absolute;
+      /* 요소의 크기가 나와 있어야 적용 ->top: 0; right: 0; bottom: 0; left: 0; */
+
+      /* 요소의 크기를 몰라도 적용 가능 */
+      top: 50%; left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+      .menu-icon .btn-close::after{
+        transform: translate(-50%, -50%) rotate(-45deg);
+      }
+      .menu-icon:hover .btn-close {
+        transform: rotate(360deg);
+      }
+  </style>
+</head>
+<body>
+  <h1>transEx2</h1>
+  <div class="menu-icon">
+    <div class="btn-close">닫기</div>
+  </div>
+</body>
+</html>

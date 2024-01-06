@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>aspect-ratio</title>
+  <style>
+    .box{
+      border: 5px solid black;
+      background-color: aquamarine;
+      margin: 20px;
+      box-sizing: border-box;
+      font-size: 2rem;
+      width: 300px;
+    }
+    .box1{ aspect-ratio: auto; }/* 기본값*/
+    .box2{ aspect-ratio: 1/1; }/* 가로 기준 비율 1: 세로 기준 비율1 */
+    .box3{ aspect-ratio: 1 ;} /*== 1/1 검사를 하면 오류로 뜬다*/
+    .box4{ aspect-ratio: 3;} /* 3/1 한자리 수의 경우 높이 비율 1이 생략된 것이다*/
+    .box5{ aspect-ratio: 16/9;} /* youtube*/
+    .box6{ aspect-ratio: 0.5;} /* == 1/2 */
+    .box7{ aspect-ratio: auto 1/1;} /* 기본값을 가지고 있는 경우 기본값 적용. 없는 경우 지정한 비율 적용*/
+    .box8{
+     background-color: orange;
+    height: 300px;
+    aspect-ratio: 2/1; /*가로 세로 값이 같이 적용된 경우 */
+    
+    } /**/
+    .box9{ 
+      background-color: orange;
+      aspect-ratio: 3/1; /* 내용이 넘치는 경우 x, aspect-ratio가 적용되게 하려면 min-height:0 */ 
+      min-height: 0;
+    } /**/
+  </style>
+</head>
+<body>
+  <h1> 가로 세로 비율 설정</h1>
+  <div class="box box1 ">box1: auto</div>
+  <div class="box box2 ">box2: 1/1</div>
+  <div class="box box3 ">box3: 1</div>
+  <div class="box box4 ">box4: 3</div>
+  <div class="box box5 ">box5: 16/9</div>
+  <div class="box box6 ">box6: 0.5</div>
+  <div class="box box7 ">box7: auto 1/1</div>
+  <div class="box box8 ">box8:</div>
+  <div class="box box9 ">box9:<p>그것을 자신과 사랑의 따뜻한 불어 수 길을 끓는다. 않는 천하를 노년에게서 풀이 이상은 피다. 만천하의 작고 인생을 못하다 창공에 아니한 뿐이다. 못할 미묘한 있음으로써 오직 쓸쓸한 품고 그들을 위하여 것이다. 얼마나 이성은 꽃이 아름다우냐? 피에 모래뿐일 가슴이 품었기 하는 아름답고 피가 아니다. 기관과 그들의 인생을 뼈 창공에 예가 사는가 하는 보이는 있는가? 인도하겠다는 가치를 그들의 그들은 불어 자신과 찾아다녀도, 힘있다. 무엇이 만물은 품에 끓는다. 위하여 품었기 모래뿐일 그림자는 예가 황금시대다. 불어 우리의 있는 광야에서 말이다.</p></div>
+
+  
+</body>
+</html>

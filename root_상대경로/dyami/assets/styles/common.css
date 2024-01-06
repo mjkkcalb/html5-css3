@@ -1,0 +1,82 @@
+@charset "utf-8";
+/* common.css */
+
+/* 변수선언 */
+@import url(./variable.css);
+
+/**** common ****/
+body {
+  font-family: var(--main-font-ko);
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  word-break: break-all;
+  overflow-wrap: break-word; /* 한글 기준 줄바꿈 */
+}
+img {
+  width: 100%;
+  vertical-align: top;
+}
+.flex {
+  display: flex;
+  align-items: center;
+}
+.lower-case {
+  text-transform: lowercase;
+}
+.main-title {
+  font-family: var(--main-font-en);
+  font-size: var(--font-size-title);
+  font-weight: 700;
+  text-transform: capitalize;
+  position: relative;
+}
+.main-title::before {
+  /*
+  content: "";
+  width: 5px;
+  height: 20px;
+  background-color: var(--point-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 100px auto 30px;
+  transform: skew(-30deg);
+  */
+
+  content: "/";
+  color: var(--point-color);
+  font-family: var(--main-font-ko);
+  font-weight: 900;
+  font-size: 2rem;
+  display: block;
+  margin: 100px 0 30px;
+}
+.main-des {
+  color: #222;
+  line-height: 1.6;
+  max-width: 470px;
+  min-width: 300px;
+  margin: 20px auto;
+}
+.more-btn {
+  transition: 0.3s;
+  background-color: var(--point-color);
+  color: white;
+  text-transform: capitalize;
+  display: inline-block;
+  padding: 10px 30px;
+}
+.more-btn:hover {
+  border-radius: 30px;
+}
+.ghost-btn {
+  display: inline-block;
+  border: 1px solid white;
+  padding: 10px 30px;
+  transition: 0.3s;
+}
+.ghost-btn:hover {
+  border-radius: 30px;
+}

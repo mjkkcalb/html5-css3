@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <title>gridEx2</title>
+  <style>
+    body {
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      width: 80%;
+      height: 60vh;
+      margin: 50px auto;
+      border: 6px solid #000;
+
+      display: grid;
+      grid-template-rows: 80px 1fr 80px;
+    }
+
+    .container .item:nth-child(1) {
+      background-color: #362FD9;
+      color: #fff;
+    }
+
+    .container .item:nth-child(2) {
+      background-color: #ebf0c5;
+    }
+
+    .container .item:nth-child(3) {
+      background-color: #248570;
+      color: #fff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="item">header-고정</div>
+    <div class="item">mian-가변</div>
+    <div class="item">footer-고정</div>
+  </div>
+</body>
+
+</html>

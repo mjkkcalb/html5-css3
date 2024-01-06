@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>em단위</title>
+  <style>
+    body{
+      font-weight: bold;
+      font-size: 22px;
+    }
+    /* 
+      * : 전체 선택자. 각 요소 요소에 적용된는 선택자로 실제 사용시 주의
+    */
+    /* *{
+      text-decoration: line-through;
+    } */
+    .wrapper *{
+      border: 3px solid black;
+      display: block;
+      padding: 20px;
+      margin: 20px;
+    }
+    .wrapper{
+      border: 3px solid black;
+      font-size: 1em;
+      /* 
+      브라우저 기본 폰트 사이즈 16px
+      1em => 16px
+      부모인 body 폰트 사이즈 22px
+      1em => 22px
+      */
+    }
+    .wrapper > h2{
+      font-size: 1.2em;
+      /*
+      부모인 .wrapper 폰트 사이즈 1em== 16px
+      1.2em => 19px
+      */
+    }
+    .wrapper > h2 > span{
+      font-size: 1em; /*부모요소 (span을 감싸고 있는 h2)를 기준으로 */
+      /*
+      부모인 h2 현재 폰트 사이즈가 19px이기 때문에
+      1em => 19px
+      */
+    }
+    .wrapper > p {
+      font-size: 1em;
+      /*
+      1em => 22px
+      */
+    }
+    .wrapper > .box {
+      font-size: 0.8em;
+      /* 
+      1em => 22px
+      0.8em => 17px
+       */
+    }
+    .wrapper > .box > p {
+      font-size: 1.1em;
+       /* 
+      1em => 17px
+      1.1em => 18px
+       */
+    }
+    .wrapper > .box > p {
+      font-size: 2em;
+       /* 
+      1em => 18px
+      2em => 36px
+       */
+    }
+  </style>
+</head>
+<body>
+  <h1>em 단위 1</h1>
+  <ul>
+    <li>알파벳 M을 기준으로 만들어진 단위</li>
+    <li>부모의 "폰트 사이즈"를 기준으로 값 설정</li>
+    <li>브라우저의 기본 폰트 사이즈: 16px</li>
+  </ul>
+
+  <div class="wrapper">
+    .wrapper 1em ==
+    <h2>
+      h2 1.2em ==
+      <span>span 1em ==</span>
+    </h2>
+
+    <p>p 1em == </p>
+
+    <div class="box">.box 1em ==
+      <p>p 1em ==
+        <span>span 1em ==</span>
+      </p>
+  </div>
+
