@@ -503,4 +503,523 @@
 
 - 링크 공유시 이미지와 간략한 내용으로 미리보기가 가능.
 ---
-- # CSS ****(Cascading Style Sheets)****
+# **CSS (Cascading Style Sheets)**
+
+### 1. CSS 기본
+
+- 첫 시작 :  @charset “utf-8”;
+- 기본 구조 : 선택자(selector) { 속성 (property) : 값 (value); }
+- 주석 /**/
+- shift+alt+방향키 → 복사
+
+> [CSS Tools: Reset CSS (meyerweb.com)](https://meyerweb.com/eric/tools/css/reset/) - 기본 css 사이트
+> 
+
+### 2. 선언 방식
+
+- 외부 선언
+    - : css style 내용을 css 파일로 따로 저장하여 페이지를 연결시키는 방법
+    - 여러개의 파일을 연결시킬 수 있기  때문에 공동/자주 사용되는 부분을 따로 저장하여 사용하는게 용이
+    - <head>안에 <link>로 작성 /  <link rel=”stylesheet” href=”common.css”>
+- 내부 선언
+    - <head> 안에 <style>로 선언. / <style></style>
+    - • `style` 태그 안은 CSS 영역.
+- 인라인 선언
+    - 각 html 태그에 직접 style 속성 값으로 지정.
+    - 제어가 어렵다는 단점이 있어 잘 사용하지 않음.
+    - style="특성:값” / <strong style=“font-size:14px; color:blue;”>텍스</strong>
+
+### 3. CSS 상속
+
+- 지정된 요소뿐만 아니라 자식, 자손 요소에게까지 적용되는 성격.
+    - 폰트 관련 속성은 상속된다.
+    - 배경색이나 배경 이미지 등의 속성은 상속되지 않는다.
+    - 박스 모델 관련 속성은 상속되지 않는다.
+
+### 4. 우선 순위
+
+- **다른 종류의 선언문이며 같은 선택자인 경우**
+    - in-line > 내부 선언 > 외부 선언의 순서로 우선 순위를 가짐.
+- **같은 이름 혹은 같은 종류의 선택자 혹은 같은 종류의 속성인 경우**
+    - 위에서 아래로 순차적으로 적용이 되고, 마지막에 선언된 스타일이 우선 순위 가짐.
+- **같은 선택자가 아닌 다른 종류 선택자인 경우**
+    - !important > inline > id(5) > class(3) > type(1) 의 순서로 우선 순위를 가짐.
+    - 복합 선택자일때 각 점수를 합해 큰 값이 표현된다.
+
+### 5. 선택자
+
+- 일반 형제 선택자
+    - 선택자 ~ 선택자
+    - 기준 요소 뒤에 오는 모든 형제 관계 선택자
+- 인접 형제 선택자
+    - 선택자 + 선택자
+    - 기준 요소 바로 뒤에 오는 형제 관계 선택자 단 하나만
+- 자 선택자
+    - 선택자 > 선택자
+
+## 230906
+
+### 1. Font **와 Text**
+
+- **서체 사용시 주의사항**
+    - 정확한 서체명 작성( 띄어쓰기 인용부호 대소문자 등)
+    - 상대방의 컴퓨터에 서체가 없는 경우를 대비해 3-4개 서체를 추가 작성(fallback fonts)
+    - 바탕체 종류로 끝나는 경우 제일 마지막은 serif로 작성
+    - 돋움(고딕)체로 끝나는 경우 제일 마지막은 sans-serif로 작성
+    - 1. 웹의 기본단위값 : px
+- **폰트 사용 시 고려 사항**
+    - 폰트 라이선스는 해결 여
+    - 힌팅 폰트로 제작 여부
+- **font와 text 특성**
+    - `font-family`: 서체 종류
+        - 대체 글꼴 작성 필요.
+        - 돋움, sans-serif  & 바탕, serif 로 마지막에 글꼴을 정의.
+    - `font-size`: 서체 크기
+    - `font-weight`: 서체 굵기
+        - normal, bold, 100~900값으로 설정.
+    - `font-style`: 서체 스타일
+        - normal, oblique, italic(기울여쓰기)
+    - `text-transform`: 대소문자
+        - 영문에서 대.소문자 관리. 한글은 대소문자가 없으니까 적용안됨.
+        - `lowercase`: 전부 소문자
+        - `uppercase`: 전부 대문자
+        - `capitalize`: 모든 단어의 첫글자 대문자
+    - `text-decoration`: 밑줄 및 취소선
+        - `overline`: 글자 상단에 밑줄
+        - `line-through`: 글자 중간에 밑줄. 취소선
+        - `underline`: 글자 하단에 밑줄
+        - `dashed`: 밑줄에 점선
+        - `none`: 효과 전체 삭제
+    - `text-indent`: 들여쓰기/ 내쓰기. 내쓰기를 주로 많이 
+    쓴다.
+        - `text-indent: 100px;` 첫 문장만 들여쓰기
+        - `text-indent: -120px;` 첫 문장 내쓰기. 웹 문서 바깥쪽으로 이동.
+    - `text-align`: 문자 정렬
+        - `left`: 왼쪽
+        - `right`: 오른쪽
+        - `center`: 중앙
+        - `justify`: 양 끝 기준 정렬. 이미지 정렬에 적합
+    - `text-shadow`: 서체 그림자
+        - `text-shadow` 작성시 반드시 띄어쓰기를 해야하며 ,를 사용하지 않는다.
+        - (x축, y축, 번짐, 색상) 값 순으로 작성.
+    - `line-height`: 줄과 줄 사이 간격. (행간)
+        - `line-height: px;` ->웹의 기본 단위 값 = px, 폰트사이즈가 변경될때 계속 고정되어 있는 값으로 나타나기때문에 행간에서는 px을 거의 사용하지 않음.
+        - `line-height: em;`
+        - `line-height: 1.7;`
+    - `letter-spacing`: 글자와 글자 사이 간격. 자간.
+    - `word-spacing`: 단어와 단어 사이 간격. 어간.
+
+## 230907
+
+### 1. 마우스 이벤트: `<a>` 태그 스타일 주기
+
+- `:`, `::`
+    - 가상 선택자로 다양한 종류가 있으며 주로 실제하는 요소와 함께 작성.
+    - 예) 의사 클래스, 의사 요소, 수열 선택자...
+    - :link, :visited, :hover, :focus, :checked ...
+    - 최근 만들어진 스타일은 `::` 두개를 사용하는 경우가 많다.
+
+```html
+    a:link{ 링크 상태일 때 }
+    a:visited{ 방문했을 때 }
+    a:hover{ 마우스를 위에 올렸을 때 }
+    a:active{ 클릭했을 때 }
+    [required]:focus{ 포커스(커서가 보이는 상태)되었을 때 }
+```
+
+### 2. `<form>` 요소 스타일 주기
+
+- form 관련 요소들은 기본 스타일이 존재하기 때문에 직접 적용
+
+### 3. 인라인 세로 정렬 `vertical-align`
+
+- 서체 및 인라인 요소 세로 정렬 기준
+- 글씨와 이미지 및 input의 정렬 상태가 맞지 않는다면, 이미지 요소 및 input에 `vertical-align`적용
+    - `top` :현재 요소와 자손들 모두 top 기준. 단, 텍스트는 행간이 존재하기 때문에 상단 여백이 남음.
+    - `baseline` :기본값
+    - `bottom` :현재 요소와 자손들 모두 bottom 기준
+    - `middle` :부모 기준(baseline 기준으로 글자 높이의 반)
+
+### 4. 가로 세로 영역 제어 `width`, `height`
+
+1. 블록 요소(p, div, h1, header, main, article, form, ul...)
+    - 가로 값의 경우 부모 요소의 가로 값을 받음
+    - 일반적인 흐름에서는 블록 요소 옆에 다른 요소가 올 수 없음
+    - 자식으로 블록, 인라인 요소 등 대부분이 올 수 있음
+    - 세로 값의 경우 자식 요소의 높이 값을 그대로 가져 옴
+- `width`, `height`로 제어 가능
+1. 인라인요소(span, img, a, em, input, strong...)
+    - 가로 값의 경우 자식(컨텐츠)의 값을 가져 옴
+    - 인라인 요소 옆에 다른 인라인 요소가 올 수 있음
+    - 자식으로 인라인 요소만 올 수 있음
+    - 세로 값의 경우 자식 요소의 높이 값을 그대로 가져옴
+    - `width`, `height`로 제어 불가능
+
+---
+
+1. 고정 너비
+
+- px을 이용해 너비를 설정. 고정값.
+- `width: 500px; height: 300px;`
+1. 가변 너비 _ % 를 이용해 페이지 내 백분율 단위로 표현. 페이지 사이즈에 따라 변한다. 요즘은 사용하는 디바이스가 다양하기 때문에 더 많이 씀.
+    - `width: 70%;`
+    - `height: 50%;`
+        - % :상대단위.
+            - width-> 부모를 기준으로 100분의 70.
+            - height-> 부모를 기준으로 100분의 50.
+        - 세로 %는 부모의 높이 값이 정의되어 있는 경우에만 적용 됨. 기본값일 때는 적용X .
+
+## 230908
+
+- p, div, h1, #id, .class
+    
+    : 다중 선택자: 여러 선택자에 동일한 특성을 부여하고자 할 때 사용. 쉼표로 구분. 띄어쓰기 상관없음 
+    
+
+## 1. 테두리 border
+
+- 방향 지정 없이 입력 가능.
+- 방향을 따로 입력하면 입력한 영역에만 스타일이 나타난다.
+    - `border-width` 테두리 굵기
+        - `border-(top, right, bottom, left) -width: px;`
+    - `border-style` 테두리 스타일
+        - `solid` : 기본선
+        - `dotted` : 도트선. 점선
+        - `double` : 이중선. 두줄. 3px 이상에서 사용
+        - `dashed` : 대쉬선. 점선
+        - `groove` : 입체선.
+    - `border-color` 테두리 색상.
+- 축약형: 값의 순서에 상관없이 띄어쓰기 구분.
+    - `border: 8px ridge #ffbb5c;`
+- override: 간결하게 작성
+
+```
+.box {
+  border: 6px solid #000;
+  border-bottom-style: double;
+}
+```
+
+- `border`와 달리, `outline`은 요소의 바깥 부분에 그려지고, 요소가 가지는 실제 크기에 영향을 주지 않음.
+- 다른 요소의 영역을 침범할 우려가 있어서 잘 사용하지 않는다.
+
+### 2. 둥근 모서리 border-radius
+
+- top-left, top-right, bottom-right, bottom-left순으로 각모서리마다 다른값을 줄 수 있다.
+    - `border-radius: 50px 20px 50px 20px;`
+- 서로 마주보고 있는 값을 한자리로 인식해서 적용.
+    - `border-radius: 50px 20px;`
+- 영역 밖으로 내용이 넘칠 때는 `overflow`를 이용해 숨길 수 있다.
+    - `overflow: hidden;`
+
+### 3. 안쪽 여백 padding
+
+- 콘텐츠 영역과 테두리 사이의 여백
+- 시계방향의 값을 가진다.
+    - `padding: 0px 0px 0px 0px;`
+- top+bottom=40px, right+left=20px 서로 마주보고 있는 값을 같이 작성 가능.
+    - `padding: 40px 20px;`
+- right+left=20px 서로 마주보고 있는 값. 같으면 생략해도 적용된다.
+    - `padding: 30px 20px 40px;`
+- 모두 같을때 하나의 값으로 작성 가능.(용량면에서는 기본 작성이 더 효율적)
+    - `padding: 50px;`
+
+### 4. 바깥 여백 margin
+
+- 기준 요소의 바깥 여백을 말한다.
+- 시계방향의 값을 가진다.
+    - `margin: 0px 0px 0px 0px;`
+- 서로 마주보고 있는 값을 같이 작성 가능.
+    - `margin: 0px 0px;`
+- right+left = 같은 값.
+    - `margin: top px right+left px bottom px;`
+- 모두 같을때 하나의 값으로 작성 가능.
+    - `margin: 0px;`
+- body에도 기본 margin값이 설정되어 있다.
+- 단, 다른 박스는 padding에만 이미지나 배경색이 적용되는데, body의 경우 예외적으로 padding+margin까지 이미지나 배경색이 적용된다.
+- **마진 상쇄 현상**
+    
+    :일반적인 흐름일 때 (단, float, flex, overflow, position등의 값이 적용된 경우는 발생하지 않음.)
+    
+    1. 형제 관계 요소에서 top과 bottom이 만낫을때 둘 중 큰 값이 적용됨. 
+    
+    2. 부모 자식 관계 요소에서 margin-top의 값이 같이 들어간 경우 둘 중 큰 값이 적용
+    
+
+### 5. 블럭 요소 중앙 정렬
+
+1. 요소의 가로 값이 필요.
+2. left+right값은 항상 auto로 설정.
+
+```
+.box {
+  margin: 0 auto 0 auto; /* top right bottom left */
+  margin: 20px auto; /* top+bottom=20, right+left=auto */
+  margin: auto; /* 일반적인 상황의 auto=>가로 중앙 정렬만, 세로 중앙 정렬은 하지 않는다. */
+  margin: auto 0; /* 세로는 오토가 먹지 않아서 값이 변하지 않음 */
+  margin: 20px auto 0; /* top right+left bottom */
+}
+```
+
+- "한 줄인 경우" 세로(위아래) 중앙 정렬 방법
+    - `height`와 `line-height`의 값을 동일하게 적용
+    - 영역에서 글이 두 줄 이상, 폰트 사이즈의 크기가 큰 경우는 잘 안됨.
+
+```
+.wrapper .site {
+  background-color: aqua;
+  border-bottom: 1px solid #fff;
+  height: 40px;
+  line-height: 40px;
+}
+```
+
+## 230911
+
+### 1. 넘치는 컨텐츠 제어 overflow
+
+- 스크롤바 표시 여부 결정
+    - `overflow: visible;` 기본값. 한정된 영역에서 컨텐츠가 넘치면 보여짐.
+    - `overflow: hidden;` 한정된 영역에서 컨텐츠가 넘치면  숨김.
+    - `overflow: auto;` 한정된 영역에서 컨텐츠가 넘치면 자동으로 스크롤 생성
+    - `overflow: scroll;` 한정된 영역에서 무조건 스크롤이 생김.
+    - `overflow: inherit;` 상속. 상속은 현재 부모나 조상 요소에 overflow가 적용된 게 없으면 상속 받지 못함.
+- overflow X축 컨트롤
+
+```
+.box {
+  overflow-y: hidden; /* 1. 일단 y축 없애줌 */
+
+  /* 2. 글자의 띄어쓰기 기준으로 줄바꿈 처리 */
+  white-space: wrap; /* 기본값. */
+  white-space: nowrap; /* br요소로 직접 줄바꿈 시키는 것 외엔 자동 줄바꿈 되지 않음 */
+}
+- overflow Y축 컨트롤
+  overflow-y: scroll; /* 무조건 스크롤 */
+  overflow-y: hidden; /* 넘치면 숨기기 */
+  overflow-y: auto; /* 넘치면 스크롤 */
+}
+```
+
+### 3. 요소 성격 변경 display+visibility+opacity
+
+- `display` 블록 레벨 요소를 인라인 요소로 바꾸거나 인라인 레벨 요소를 블록 레벨 요소로 바꿀 수 있다.
+    - `inline` 요소의 기본 성격 변경. 상속x. 해당 요소에만 적용
+    - `block` 인라인요소를 블럭요소로 변경.
+    - `inline-block`
+        - 인라인, 블록 성격 모두 가짐
+            - 인라인처럼 띄어쓰기, 줄바꿈 인식
+            - 인라인처럼 line-height 값을 가짐
+            - 블록처럼 width, height 값을 가짐
+            - 가로 중앙 정렬의 경우 인라인, 블록 적용 방식 다 가능.
+            - 다만, 띄어쓰기가 있어 인라인 방식으로 정렬하는 것이 좀 더 편함.
+    - `none` 브라우저 영역에서 사라짐. 코드 창에서만 확인 가능하며 레이아웃에 영향을 줌.
+- `visibility: hidden;` 브라우저 영역은 남으나 컨텐츠가 보이지 않음. visible=보임, hidden=숨김
+- `opacity`: 불투명도 조절. 자식에게까지 영향을 줌. 0~1사이 값
+
+## 230912
+
+### 박스 모델: 요소의 실제 크기 계산법
+
+- box-sizing: content-box;/* 기본값 width+margin+padding+border
+- box-sizing: border-box;/* width(padding+border)+margin
+
+### 어절 기준 줄바꿈 제어 (띄어쓰기 기준)
+
+- `word-break: normal;` 기본값.
+- `word-break: break-all;` 어절에 맞춰 줄바꿈. 단, 영어 한정.
+- `word-break: keep-all;` 어절을 유지하며 줄바꿈. 한글에 적합.
+
+## 230913
+
+### 1. 리스트 스타일 축약형
+
+- ul 스타일을 변경.
+- `ul` 혹은  `li`에도 사용 가능.
+
+```
+ul {
+  width: 300px;
+  /* 잘 사용하진 않음.
+      list-style-type: lower-greek;
+      list-style-position: inside;
+       */
+  list-style: inside square; /* 축약형. 띄어쓰기로 구분. */
+  list-style: none; /* 주로 메뉴를 만들 때 사용. 가장 많이 사용. */
+}
+```
+
+### 2. 테이블 스타일
+
+- table은 자신만의 고정값이 있어서 부모에게 상속받지 못한다.
+- table 태그에 border태그로 테두리를 줄 경우 기본으로 중앙 정렬이 된다.
+- 페이지에서 중앙정렬 →  width값 없이 마진값으로만 적용.
+- 셀과 셀 사이의 간격. 테이블 요소에만 적용되는 전용 속성.
+    - `border-spacing: 0px;`
+    - `border-spacing: 0px 0px;` /_ X축 Y축 순으로 적용. _/
+- 셀과 셀의 겹치는 셀 조정.
+    - `border-spacing: 0;` 먼저 사이 간격 값 0으로 초기화.
+    - `border-collapse: separate;` 기본값. 겹치는 셀 테두리 값 그대로 둠.
+    - `border-collapse: collapse;` 겹치는 셀 테두리 값 제어
+- 컨텐츠가 없는 경우 셀 처리 방법
+    - `empty-cells: show;` 셀 남김. 기본값
+
+## 230914
+
+- 마우스를 올렸을 때 생기는 아웃라인을 없애기 위해서는 <outline: none;> 명령어를 쓴다
+    - *크럼, 엣지, 웨일 등 모던 브라우저에서 생기는 현상으로 포커스 상태일 때 테두리를 없앰*
+    
+    ![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/a669081c-5776-46fa-897c-e787e4b50139/db915c41-e272-47bc-aaca-57ba093be5a1/Untitled.png)
+    
+
+- input이 많을 경우에는 아래와 같이 type으로 구분해준다. /*속성 (특성) 선택자: 요소[속성], 요소[속성=값], [속성]*
+
+```
+form input[type="text"]:hover {
+      background-color: aquamarine;
+      border: 1px solid black;
+```
+
+- 마우스 커서 손가락 모양으로 바꾸기 <cursor: pointer;>
+
+### 1. accent-color 속성
+
+- `input`값에는 기본적인 color 스타일 적용이 안된다.
+- input type=checkbox, radio, range, progress 컨트롤 값 제어. `accent-color: 색상;`
+
+> https://caniuse.com/ →  내가 사용하려는 태그에 대해 브라우저에서 적용 되는지 확인 할 수 있다.
+> 
+
+### 2. :before :after
+
+- 해당 요소로 작성한 내용은 드래그가 되지 않는다.
+- 값으로 작성되는 부분은 텍스트 컨텐츠의 영역으로 코드값이 적용되지 않는다.
+- `content` 생략 불가능. ""로 내용을 비워둘 순 있지만, 값은 절대 뺄 수없다. 무조건 작성.
+    - `:before`, `::before`
+        - 기준 요소 안의 컨텐츠 영역 앞쪽에 적용. 의사 요소
+    - `:after`, `::after`
+        - 기준 요소 안의 컨텐츠 영역 뒤쪽에 적용.
+
+### 3. 단위 em
+
+- 알파벳 M을 기준으로 만들어진 단위
+- 부모의 `font-size`를 기준으로 값 설정
+- 브라우저 기본 폰트 사이즈: 16px
+- 1em = 16px, 2em = 32px
+- '나'를 감싸고 있는 부모를 기준으로 설정.
+- 브라우저마다 상대적인 값으로 표현.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/a669081c-5776-46fa-897c-e787e4b50139/a826f4fc-21b8-44e0-8e81-9984aab55f86/Untitled.png)
+
+> http://pxtoem.com/ em=px 변환 사이트
+> 
+
+### 4. 단위 rem
+
+- root, 즉 최상위 요소(html)의 font-size를 기준으로 설정
+
+```
+html {
+  /* <- rem 기준. 최상위 root 요소 */
+  font-size: 24px;
+}
+body {
+  /* body는 html의 자식 요소. body 값에 font-size를 넣어도 rem에 적용되지 않는다. */
+  font-size: 20px;
+}
+```
+
+1. 단위 viewport
+    - vw: viewport width, vh: viewport height
+    - 뷰포트의 가로 세로 값을 기준으로 사용하는 상대 단위 값
+    - 100분의 1 단위
+    - 상대 단위인 %는 부모를 기준으로 값을 정하지만(부모 요소를 넘기지 않음),                                                                                                                vw vh는 부모와 상관없이 뷰포트를 기준으로 값을 정한다. (부모 요소를 넘김)
+    - 스크롤 바 인식을 못하는 단점이 있다.
+
+## 230915
+
+**flex**
+
+> `https://developer.mozilla.org/ko/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox`  개념 설명 1
+> 
+
+> [An Interactive Guide to Flexbox in CSS (joshwcomeau.com)](https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/) 개념 설명 2
+> 
+- 기본은 row로 지정 되어있다.
+- 박스를 아래로 붙일 때 1 → align-items: flex-end + height : 100vh
+- 박스를 아래로 붙일 때 2 → align-self: flex-end (플렉스 아이템에 직접 적용
+
+```css
+/* margin: auto; center center */
+/* margin-left: auto; 여백이 왼쪽으로 들어가기 때문에 아이템은 오른쪽 배치 */
+/* margin-right: auto; 여백이 오른쪽으로 들어가기 때문에 아이템은 왼쪽 배치 */
+/* margin-bottom: auto; 여백이 아래쪽으로 들어가기 때문에 아이템은 위쪽 배치 */
+/* margin-top: auto; 여백이 위쪽으로 들어가기 때문에 아이템은 아래쪽 배치 */
+```
+
+## 230918
+
+- 
+
+## 230920
+
+- box1 ~ ul li → box1을 제외한 box의 형제들 안에 있는 li에 명령
+- *flex-item css 특성 종류 - order, flex-grow, flex-shrink, flex-basis, flex ...*
+    
+    ```css
+    flex-grow: 0; 숫자가 클수록 더 큰 영역을 가짐. 가변값이 아니거나 0인 경우 적용되지 않음.
+    flex-shrink: 1; 숫자가 클수록 더 큰 영역 감소. 가변값이 아니거나 0인 경우 적용되지 않음.
+    flex-basis: auto; 기본 가로 값 설정. auto인 경우 width, height 등의 특성으로 가로 설정이 가능하나 단위값이 주어진 경우 설정 안됨.
+    flex: 증가비율(flex-grow) 감소비율(flex-shrink) 기준비율(flex-basis);
+    flex: 0 1 auto; 기본값
+    ```
+    
+    - flex-order *: flex-item에 적용되는 속성으로 아이템 배치 순서 설정*
+- flex-shrink 감소비율 →숫자가 클수록 감소 폭 커짐. 숫자가 클수록 아이템의 크기는 더 작아짐
+    - flex-shrink: 1; → 기본값. 아이템이 컨테이너를 넘기지 않음
+    - flex-shrink: 0; → *width의 값이 그대로 적용. 즉 넘치는 경우 컨테이너를 넘김*
+- flex-grow 증가비율 →숫자가 클수록 증가 폭 커짐.
+    - flex-grow: 0; → 기본값. 증가하지 않음
+    - flex-grow: 1; 1:1:1:1 → 비율 값으로 동일하게 커져 컨테이너를 채움
+- flex-basis 기준비율
+    - flex-basis: auto; → 기본값. 아이템 컨텐츠 크기에 맞춰 grow 비율 설정
+    - flex-basis: 0; → *플렉스 아이템의 컨텐츠를 제외한 영역을 기준으로 grow와 shrink 설정 (기준값 width 300 / grow:0 / shrink: 1)*
+    - flex-basis: 300px; →*flex-shrink: 1; 적용되어 있어 컨테이너를 넘지 못함 (기준값 width 300 / grow:0 / shrink: 1)*
+
+## 230921
+
+### position
+
+- position 요소의 배치
+    - **static**
+        - 기본값. 아무런 특성이 없기 때문에 주로 다른 포지션 값이 적용된 요소를 '초기화' 하고자 할 때 사용
+    - **relative**
+        - 일반적인 흐름에 따라 자기 자신을 기준으로 위치 지정. top, right, bottom, left 위치 특성과 함께 사용되거나 생략될 수 있음.
+    - **absolute**
+        - 일반적인 흐름에서 벗어나며 포지션이 적용된 가장 가까운 부모 요소를 기준으로 위치 지정. top, right, bottom, left 위치 특성과 함께 사용.
+    - **fixed**
+        - 일반적인 흐름에서 벗어나며 브라우저를 기준으로 위치 지정. top, right, bottom, left 위치 특성과 함께 사용. transform, perspective, filter 특성이 부모 요소에 적용되어 있으면 그 요소를 기준으로 삼음.
+    - **sticky**
+        - 일반적인 흐름을 가지나 top, right, bottom, left의 값에 따라 offset 적용(스크롤 이벤트)
+
+## 231005
+
+- ::before, ::after 사용 시 content 태그는 꼭 들어가야 한다. 다만 비워둬도 된다.(ex. content: “”;)
+- overflow: hidden; → 마진 상쇄 현상을 없앨 수 있다.
+- aspect-ratio: 1/1; → 가로, 세로 비율을 맞춰준다 (content가 넘지 않는 경우에만 사용 가능)
+- 위에서 준 left 값을 무력화 시키기 위해서는 아래 left : auto; 값을 준다
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/a669081c-5776-46fa-897c-e787e4b50139/f9c05a82-df38-47e5-b9a8-fd2b2cb1e354/Untitled.png)
+
+## 231011
+
+### grid
+
+> https://studiomeal.com/archives/533→ 그리드 참고 사이트
+> 
+
+```css
+grid : row(행 )/ column(열)
+    grid-container 속성 : grid-template, grid-area, gap, justify-content, align-item...
+    grid-item 속성 : grid-row, grid-column, justify-self, aling-self...
+```
