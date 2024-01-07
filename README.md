@@ -1,3 +1,4 @@
+
 # HTML ****(Hyper Text Markup Language)****
 
 - 페이지의 제목, 문단, 표, 이미지, 동영상 등 웹의 구조를 담당 (안에 들어있는 구조들만 작성)
@@ -15,6 +16,51 @@
     4. `<태그/>` : 태그를 시작하자마자 종료를 시킨다.
         
         
+- 웹페이지 분석
+    
+    ```html
+    ex1)
+    <div class="container>
+    	<header></header>
+    	<nav></nav>
+    	<div class="contents"></div>
+    	<footer></footer>
+    </div>
+    ```
+    
+    ```html
+    ex2)
+    <div class="container>
+    	<header></header>
+      <nav></nav>
+      <div class="contents"></div>
+      <footer></footer>
+    </div>
+    ```
+    
+    - main은 html 안에서 1번만 쓸 수 있다. 추가로 main의 부모 요소로 가능한 태그는 div or body 가 있다.
+    - article → 독립적인 요소 / 제목 태그 필수( section과 차이 찾아보기)
+    - section → 간편히 분할 해주는 요소 / 제목 태그 필수
+    - 
+- font
+    
+    > [https://caniuse.com/](https://caniuse.com/)
+    > 
+    - 위 사이트를 통해 신규 코드를 웹 브라우저에서 사용할 수 있는지 확인 가능하다.
+    
+    > *https://developer.mozilla.org/en-US/docs/Web/CSS/font-weight#common_weight_name_mapping*
+    > 
+    - 위 사이트를 통해 폰트 weight 사이즈 확인 가능.
+- swiper 사용
+    - swiper 사이트 →[swiperjs.com](https://swiperjs.com/demos#autoplay)
+    - demos 페이지에서 원하는 스타일 코드 열기
+    - html과 css에 원하는 스타일 css와 js 외부 링크 파일 연결하기
+    - 열어놓은 스타일 코드를 참고해 넣기
+    - 10/17일 수업 자료 참고하기
+
+- button → 전송을 시켜 결과를 받아야 할 때 사용
+- 구글 폰트 아이콘 사용 시 ****Static icon font**** 은 복사해 title 아래로 넣고 ****Inserting the ico**** 은 넣고싶은 위치에 복사해 넣는다
+- 드래그 컨트롤 +k+ f = 정렬
 
 ## **230824**
 
@@ -376,6 +422,21 @@
 
 ### 2.favicon 연결
 
+- favicon 적용 방법
+    
+    > [https://realfavicongenerator.net/](https://realfavicongenerator.net/)
+    > 
+    - 위 사이트에서 이미지를 만들고 난 뒤 저장해 사용할 사이즈에 맞는 이미지들은 html 파일 내부에 있는 images 파일에 저장한다. 추가로 site.webmanifest 문서는 html과 동일한 파일에 넣는다.
+    
+    ```html
+    <!-- <link rel="shortcut icon" href=""> -->
+      <link rel="apple-touch-icon" sizes="180x180" href="./images/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="./images/favicon-16x16.png">
+      <link rel="manifest" href="/site.webmanifest">
+      <meta name="theme-color" content="#ffffff">
+    ```
+    
 - favicon.ico
 - 상단 태그 그림 =파비콘
 - 가장 기본적인 파비콘 파일로 16X16 크기를 가짐.
